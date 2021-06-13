@@ -28,12 +28,13 @@
     "prettier"
   ],
   "rules": {
-    "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/no-explicit-any": 0,
-    "@typescript-eslint/no-empty-function": 0,
-    "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0,
-    "no-empty-function": 0,
-    "@typescript-eslint/ban-ts-comment": 0
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-empty-function": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }
