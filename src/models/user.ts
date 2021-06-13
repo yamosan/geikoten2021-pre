@@ -1,7 +1,9 @@
-import { User } from "../interfaces";
+export type User = {
+  id: number;
+  name: string;
+};
 
-/** Dummy user data. */
-export const sampleUserData: User[] = [
+export const SAMPLE_USER_DATA: User[] = [
   { id: 101, name: "Alice" },
   { id: 102, name: "Bob" },
   { id: 103, name: "Caroline" },

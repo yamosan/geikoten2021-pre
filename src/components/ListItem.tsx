@@ -1,7 +1,7 @@
 import type { VFC } from "react";
 import Link from "next/link";
 
-import { User } from "../interfaces";
+import { User } from "models/user";
 
 type Props = {
   data: User;

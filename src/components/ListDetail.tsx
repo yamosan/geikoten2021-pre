@@ -1,6 +1,6 @@
 import type { VFC } from "react";
 
-import { User } from "../interfaces";
+import { User } from "models/user";
 
 type Props = {
   item: User;
