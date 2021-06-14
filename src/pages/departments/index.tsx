@@ -1,21 +1,25 @@
-import { GetStaticProps } from "next";
+import { GetStaticProps, NextPage } from "next";
 
-import { User, SAMPLE_USER_DATA } from "models/user";
+import { Department } from "models/department";
+import departments from "data/departments";
 import Layout from "components/Layout";
 
 type Props = {
-  items: User[];
+  items: Department[];
 };
 
-const WithStaticProps = ({ items }: Props) => (
-  <Layout title="Departments | Next.js + TypeScript Example">
-    <h1>Departments</h1>
-  </Layout>
-);
-
-export const getStaticProps: GetStaticProps = async () => {
-  const items: User[] = SAMPLE_USER_DATA;
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const items: Department[] = departments;
   return { props: { items } };
 };
 
-export default WithStaticProps;
+const Departments: NextPage<Props> = ({ items }) => (
+  <Layout title="Departments | Next.js + TypeScript Example">
+    <h1>Departments</h1>
+    {items.map((item) => (
+      <div key={item.id}>{item.name}</div>
+    ))}
+  </Layout>
+);
+
+export default Departments;

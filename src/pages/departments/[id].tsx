@@ -1,51 +1,29 @@
-import { GetStaticProps, GetStaticPaths } from "next";
+import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 
-import { User, SAMPLE_USER_DATA } from "models/user";
+import { Department } from "models/department";
+import departments from "data/departments";
 import Layout from "components/Layout";
 
 type Props = {
-  item?: User;
-  errors?: string;
+  item: Department;
 };
-
-const StaticPropsDetail = ({ item, errors }: Props) => {
-  if (errors) {
-    return (
-      <Layout title="Error | Next.js + TypeScript Example">
-        <p>
-          <span style={{ color: "red" }}>Error:</span> {errors}
-        </p>
-      </Layout>
-    );
-  }
-
-  return (
-    <Layout
-      title={`${
-        item ? item.name : "User Detail"
-      } | Next.js + TypeScript Example`}
-    >
-      item
-    </Layout>
-  );
-};
-
-export default StaticPropsDetail;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = SAMPLE_USER_DATA.map((user) => ({
-    params: { id: user.id.toString() },
+  const paths = departments.map((item) => ({
+    params: { id: item.id.toString() },
   }));
 
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  try {
-    const id = params?.id;
-    const item = SAMPLE_USER_DATA.find((data) => data.id === Number(id));
-    return { props: { item } };
-  } catch (err) {
-    return { props: { errors: err.message } };
-  }
+export const getStaticProps: GetStaticProps<Props, { id: string }> = async ({ params }) => {
+  const id = params?.id;
+  const item = departments.find((data) => data.id === Number(id));
+  return { props: { item } };
 };
+
+const DepartmentId: NextPage<Props> = ({ item }) => {
+  return <Layout title={`${item ? item.name : "Department Detail"} | Next.js + TypeScript Example`}>item</Layout>;
+};
+
+export default DepartmentId;
