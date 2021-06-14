@@ -11,9 +11,6 @@
   "npm.packageManager": "npm",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "css.validate": false,
-  "cSpell.words": [
-    "geikousai",
-    "tailwindcss"
-  ], // Disable css built-in lint
+  "cSpell.words": ["geikousai", "tailwindcss"] // Disable css built-in lint
   // "stylelint.enable": true, // Enable sytlelint
 }
