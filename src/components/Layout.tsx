@@ -7,10 +7,7 @@ type Props = {
   title?: string;
 };
 
-const Layout: VFC<Props> = ({
-  children,
-  title = "This is the default title",
-}) => (
+const Layout: VFC<Props> = ({ children, title = "This is the default title" }) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -20,7 +17,7 @@ const Layout: VFC<Props> = ({
     <header>
       <nav>
         <Link href="/">
-          <a>Home</a>
+          <a>TOP</a>
         </Link>
         <Link href="/departments">
           <a>Departments</a>
