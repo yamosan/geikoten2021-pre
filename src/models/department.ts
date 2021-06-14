@@ -10,3 +10,4 @@ export type Department = {
   };
   qAndA: QAndA[]; // TODO: 正規化
 };
+// TODO: サムネイルの追加
