@@ -1,7 +1,7 @@
 import type { VFC, ReactNode } from "react";
 import Head from "next/head";
-import Header from "components/shared/Header";
-import Footer from "./shared/Footer";
+import Header from "components/layouts/Header";
+import Footer from "components/layouts/Footer";
 
 type Props = {
   children?: ReactNode;
