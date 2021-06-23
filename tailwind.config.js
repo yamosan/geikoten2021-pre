@@ -11,8 +11,8 @@ module.exports = {
         black: "#504746",
         gray: "#BFBFBF",
         "light-gray": "#DFDFDF",
-      }
-    }
+      },
+    },
   },
   variants: {
     extend: {},
