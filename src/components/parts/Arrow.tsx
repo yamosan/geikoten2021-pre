@@ -2,7 +2,7 @@ import React, { VFC } from "react";
 import clsx from "clsx";
 
 type Props = {
-  color?: "white" | "black" | "primary";
+  color?: "white" | "black" | "primary" | "secondary"; // TODO: Themeを参照したい
   size?: "large" | "small";
 };
 
@@ -13,6 +13,7 @@ const Arrow: VFC<Props> = (props) => {
     "text-white": props.color === "white",
     "text-black": props.color === "black",
     "text-primary": props.color === "primary",
+    "text-secondary": props.color === "secondary",
   });
   return (
     <svg className={classes} fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
