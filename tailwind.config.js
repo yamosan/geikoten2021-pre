@@ -12,6 +12,9 @@ module.exports = {
         gray: "#BFBFBF",
         "light-gray": "#DFDFDF",
       },
+      fontSize: {
+        xxs: ".625rem",
+      },
     },
   },
   variants: {
