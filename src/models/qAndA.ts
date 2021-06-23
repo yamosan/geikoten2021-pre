@@ -1,5 +1,9 @@
-export type QAndA = {
-  isAnswer: boolean;
+type Answer = {
   content: string;
   highlight?: string[];
+};
+
+export type QAndA = {
+  question: string;
+  answers: Answer[];
 };

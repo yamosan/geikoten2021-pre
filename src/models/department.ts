@@ -8,6 +8,5 @@ export type Department = {
     name: string;
     class: TClass;
   };
-  qAndA: QAndA[]; // TODO: 正規化
+  qAndA: QAndA;
 };
-// TODO: サムネイルの追加
