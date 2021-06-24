@@ -11,7 +11,10 @@ const Heading: VFC<Props> = ({ children, as = "h2", ...rest }) => {
   const Tag = as;
 
   return (
-    <Tag {...rest} className="bg-white border-black border text-lg text-black text-center px-6 py-1 min-w-max">
+    <Tag
+      {...rest}
+      className="bg-white border-black border font-bold text-lg text-black text-center px-6 py-1 min-w-max" // FIXME: 若干上に寄っている
+    >
       {children}
     </Tag>
   );
