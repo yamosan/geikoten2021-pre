@@ -15,11 +15,14 @@ module.exports = {
         "light-gray": "#DFDFDF",
       },
       fontSize: {
-        xxs: ".625rem",
+        xxs: ".625rem", // 10px
       },
       fontFamily: {
         sans: ["Noto Sans JP", ...defaultTheme.fontFamily.sans],
         genuine: ["Genuine", ...defaultTheme.fontFamily.sans],
+      },
+      spacing: {
+        33: "8.25rem", // 132px
       },
     },
   },
