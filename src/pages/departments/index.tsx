@@ -1,17 +1,16 @@
 import { GetStaticProps, NextPage } from "next";
 
 import { Department } from "models/department";
-import departments from "data/departments";
-import Layout from "components/Layout";
+import Layout from "components/layouts";
 
 type Props = {
   items: Department[];
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const items: Department[] = departments;
-  return { props: { items } };
-};
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const items: Department[] = departments; // TODO: data/departments配下のjson全てを読み込み
+//   return { props: { items } };
+// };
 
 const Departments: NextPage<Props> = ({ items }) => (
   <Layout title="Departments | Next.js + TypeScript Example">
