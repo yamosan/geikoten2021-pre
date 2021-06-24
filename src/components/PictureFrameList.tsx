@@ -10,7 +10,7 @@ type Props = {
 
 const PictureFrameList: VFC<Props> = ({ departments }) => {
   return (
-    <div className="grid grid-cols-2 justify-center justify-items-center gap-6 w-max">
+    <div className="grid grid-cols-2 justify-center justify-items-center gap-3.5 w-max">
       {departments.map((v, i) => (
         <PictureFrame title={v.department} subTitle={v.manager} key={i.toString()} />
       ))}
