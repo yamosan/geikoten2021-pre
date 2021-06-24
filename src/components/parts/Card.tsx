@@ -10,11 +10,13 @@ type Props = {
 const Card: VFC<Props> = ({ title, batch }) => {
   return (
     <div className="relative h-33 w-33 rounded-lg overflow-hidden">
-      {batch && <div className="absolute top-2 left-2 font-genuine text-3xl text-white tracking-wide">{batch}</div>}
-      <figure className="bg-gray w-full h-full flex justify-center items-center z-10">
+      <figure className="bg-gray w-full h-full flex justify-center items-center">
         <Image src="/img/content.png" alt="コンテンツのサムネイル" layout="fill" className="object-cover" />
       </figure>
-      <div className="absolute w-full bg-black bottom-0">
+      {batch && (
+        <div className="absolute top-2 left-2 font-genuine text-3xl text-white tracking-wide z-10">{batch}</div>
+      )}
+      <div className="absolute w-full bg-black bottom-0 z-10">
         <div className="relative flex justify-center items-center">
           <h3 className="text-white text-sm py-1">{title}</h3>
           <div className="py-1 absolute right-2">
