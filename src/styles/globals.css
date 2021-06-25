@@ -7,3 +7,9 @@
   src: url("/fonts/Genuine/Genuine 400.ttf");
   font-weight: 400;
 }
+
+/* TODO: themeがの色使いたい。linear-gradientを@applyで書きたい。 */
+.highlight {
+  @apply font-bold text-black;
+  background: linear-gradient(transparent 60%, #d3d977 50%);
+}
