@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap');
+
 @font-face {
   font-family: "Genuine";
   src: url("/fonts/Genuine/Genuine 400.ttf");
