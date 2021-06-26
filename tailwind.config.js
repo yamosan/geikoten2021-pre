@@ -24,6 +24,9 @@ module.exports = {
       spacing: {
         33: "8.25rem", // 132px
       },
+      boxShadow: {
+        solid: "3px 3px 0 0 rgba(80, 71, 70, 1)",
+      },
     },
   },
   variants: {
