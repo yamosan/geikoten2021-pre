@@ -27,6 +27,9 @@ module.exports = {
       boxShadow: {
         solid: "3px 3px 0 0 rgba(80, 71, 70, 1)",
       },
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
     },
   },
   variants: {
