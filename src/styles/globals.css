@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap");
 
 @font-face {
   font-family: "Genuine";
@@ -14,4 +14,58 @@
 .highlight {
   @apply font-bold text-black;
   background: linear-gradient(transparent 60%, #d3d977 50%);
+}
+
+/* TODO: after(before)擬似要素を設定できるプラグイン */
+.speech-bubble,
+.speech-bubble--reversed {
+  position: relative;
+  padding: 14px 18px;
+  min-width: 120px;
+  max-width: 100%;
+  min-height: 50px;
+  width: max-content;
+  background: #fff;
+  border: solid 1px currentColor;
+  border-radius: 5px;
+}
+
+.speech-bubble:before,
+.speech-bubble--reversed:before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  margin-top: -6px;
+  border: 6px solid transparent;
+  z-index: 20;
+}
+
+.speech-bubble:after,
+.speech-bubble--reversed:after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  margin-top: -6px;
+  border: 6px solid transparent;
+  z-index: 10;
+}
+
+.speech-bubble:before {
+  left: -11px;
+  border-right: 6px solid #fff;
+}
+
+.speech-bubble:after {
+  left: -13px;
+  border-right: 6px solid currentColor;
+}
+
+.speech-bubble--reversed:before {
+  right: -11px;
+  border-left: 6px solid #fff;
+}
+
+.speech-bubble--reversed:after {
+  right: -13px;
+  border-left: 6px solid currentColor;
 }
