@@ -8,5 +8,5 @@ export type Department = {
     name: string;
     class: TClass;
   };
-  qAndA: QAndA;
+  qAndA: QAndA[];
 };
