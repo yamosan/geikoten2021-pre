@@ -33,7 +33,7 @@ const QAndA: VFC<Props> = (props) => {
           <div className="relative w-12 h-12 bg-gray rounded-md overflow-hidden">
             <Image src="/img/400x250.png" alt="回答者" layout="fill" className="object-cover" />
           </div>
-          <p className="text-black text-xs pt-1">脛骨</p>
+          <p className="text-black text-xxs pt-1">脛骨</p>
         </div>
       </div>
     </div>
