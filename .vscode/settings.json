@@ -2,14 +2,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.lineNumbers": "on",
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "npm.packageManager": "npm",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "css.validate": false,
-  "cSpell.words": ["geikousai", "tailwindcss"] // Disable css built-in lint
-  // "stylelint.enable": true, // Enable sytlelint
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "cSpell.words": ["geikousai", "tailwindcss"]
 }
