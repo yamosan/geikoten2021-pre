@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Layout from "components/Layout";
+import Layout from "components/layouts";
 
 const IndexPage: NextPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
