@@ -1,7 +1,11 @@
-import React from "react";
+import React, { VFC } from "react";
 
-const TekibusyoChartIcon = () => (
-  <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+type Props = {
+  size?: number;
+};
+
+const TekibusyoChartIcon: VFC<Props> = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="TekibusyoChart">
       <path
         id="arrow-back"
@@ -88,5 +92,9 @@ const TekibusyoChartIcon = () => (
     </g>
   </svg>
 );
+
+TekibusyoChartIcon.defaultProps = {
+  size: 66,
+};
 
 export default TekibusyoChartIcon;
