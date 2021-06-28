@@ -3,12 +3,13 @@ import Heading from "components/parts/Heading";
 
 type Props = {
   heading: string;
+  className: string;
   children: React.ReactNode;
 };
 
-const Section: VFC<Props> = ({ heading, children }) => {
+const Section: VFC<Props> = ({ heading, className, children }) => {
   return (
-    <section className="">
+    <section className={className}>
       <Heading>{heading}</Heading>
       <div className="mt-5">{children}</div>
     </section>
