@@ -4,7 +4,7 @@ import Logo from "components/parts/Logo";
 
 const Header: VFC = () => {
   return (
-    <header className="w-full h-12 flex items-center fixed z-10 top-0 bg-blue-100">
+    <header className="w-full h-12 flex items-center fixed z-10 top-0 bg-transparent">
       <div className="px-4">
         <Logo />
       </div>
