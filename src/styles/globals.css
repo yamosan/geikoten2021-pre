@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 
 @font-face {
   font-family: "Genuine";
@@ -68,4 +68,18 @@
 .speech-bubble--reversed:after {
   right: -13px;
   border-left: 6px solid currentColor;
+}
+
+.triangle-r {
+  background-color: #fff;
+  width: 16px;
+  height: 30px;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+
+.triangle-l {
+  background-color: #fff;
+  width: 16px;
+  height: 30px;
+  clip-path: polygon(100% 0, 0% 50%, 100% 100%);
 }
