@@ -6,6 +6,7 @@ export type Department = {
   name: string;
   manager: {
     name: string;
+    shortenedName?: string;
     class: TClass;
   };
   qAndA: QAndA[];
