@@ -18,10 +18,12 @@ const _items: Department[] = [
   {
     id: 1,
     name: "芸工祭長",
-    manager: {
-      name: "脛骨",
-      class: "3O",
-    },
+    managers: [
+      {
+        name: "脛骨",
+        class: "3O",
+      },
+    ],
     qAndA: [
       {
         question: "どんなお仕事してますか？",
@@ -36,10 +38,12 @@ const _items: Department[] = [
   {
     id: 2,
     name: "副祭長",
-    manager: {
-      name: "副祭長",
-      class: "3O",
-    },
+    managers: [
+      {
+        name: "副祭長",
+        class: "3O",
+      },
+    ],
     qAndA: [
       {
         question: "どんなお仕事",
@@ -54,10 +58,12 @@ const _items: Department[] = [
   {
     id: 3,
     name: "書記",
-    manager: {
-      name: "書記",
-      class: "3O",
-    },
+    managers: [
+      {
+        name: "書記",
+        class: "3O",
+      },
+    ],
     qAndA: [
       {
         question: "お仕事してますか？",
@@ -72,10 +78,37 @@ const _items: Department[] = [
   {
     id: 4,
     name: "総務",
-    manager: {
-      name: "総務",
-      class: "3O",
-    },
+    managers: [
+      {
+        name: "総務",
+        class: "3O",
+      },
+    ],
+    qAndA: [
+      {
+        question: "どんなお仕事しか？",
+        answers: [
+          {
+            content: "椅子に座って偉そうに皆に指示をしているよ！",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "ステージ",
+    managers: [
+      {
+        name: "マチュピチュ",
+        class: "3O",
+      },
+      {
+        name: "おだんござむらい",
+        shortenedName: "おだんご",
+        class: "3N",
+      },
+    ],
     qAndA: [
       {
         question: "どんなお仕事しか？",
@@ -135,10 +168,20 @@ const DepartmentId: NextPage<Props> = (props) => {
         <div className="relative mt-0">
           <div className="w-full bg-bg rounded-3xl pt-6 pb-20">
             <h2 className="font-medium text-2xl text-center text-secondary py-0.5">{current.name}</h2>
-            <h4 className="font-medium text-base text-center text-black">{`${current.manager.class}・${current.manager.name}`}</h4>
+            {current.managers.map((manager, i) => (
+              <h4 key={i.toString()} className="font-medium text-base text-center text-black">
+                {`${manager.class}・${manager.name}`}
+              </h4>
+            ))}
             <div className="mt-4 bg-white w-11/12 rounded-2xl mx-auto px-5 pt-7 pb-12">
               {current.qAndA.map((v, i) => (
-                <QAndA index={i + 1} question={v.question} answers={v.answers} key={i.toString()} />
+                <QAndA
+                  index={i + 1}
+                  names={current.managers.map((v) => v.shortenedName || v.name)}
+                  question={v.question}
+                  answers={v.answers}
+                  key={i.toString()}
+                />
               ))}
             </div>
             <div className="text-center text-black mt-6">
