@@ -1,12 +1,12 @@
-import React, { VFC } from "react";
+import React, { ReactNode, VFC } from "react";
 import Image from "next/image";
 
 type Props = {
   title: string;
-  subTitle: string;
+  children: ReactNode;
 };
 
-const PictureFrame: VFC<Props> = ({ title, subTitle }) => {
+const PictureFrame: VFC<Props> = ({ title, children }) => {
   return (
     <div className="flex flex-col items-center">
       <figure className="relative w-36 h-36 p-2.5 border border-black flex flex-col items-center ">
@@ -17,7 +17,7 @@ const PictureFrame: VFC<Props> = ({ title, subTitle }) => {
       </figure>
       <div className="flex flex-col items-center">
         <h5 className="text-secondary font-bold text-lg">{title}</h5>
-        <h6 className="text-black font-bold text-xs">{subTitle}</h6>
+        <div className="flex flex-col items-center">{children}</div>
       </div>
     </div>
   );
