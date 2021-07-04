@@ -17,10 +17,17 @@ const _items: Department[] = [
   {
     id: 1,
     name: "芸工祭長",
-    manager: {
-      name: "脛骨",
-      class: "3O",
-    },
+    managers: [
+      {
+        name: "おだんござむらい",
+        shortenedName: "おだんご",
+        class: "3O",
+      },
+      {
+        name: "マチュピチュ",
+        class: "3N",
+      },
+    ],
     qAndA: [
       {
         question: "どんなお仕事してますか？",
