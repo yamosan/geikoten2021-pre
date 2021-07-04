@@ -4,10 +4,10 @@ type TClass = "3M" | "3N" | "3O";
 export type Department = {
   id: number;
   name: string;
-  manager: {
+  managers: {
     name: string;
     shortenedName?: string;
     class: TClass;
-  };
+  }[];
   qAndA: QAndA[];
 };
