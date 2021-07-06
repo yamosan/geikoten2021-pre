@@ -30,7 +30,6 @@ export const getStaticProps: GetStaticProps<Props, { name: string }> = async (ct
   const current = items.find((v) => v.name === name);
   const next = current.id + 1 <= items.length ? items.find((v) => v.id === current.id + 1) : items[0];
   const prev = current.id - 1 >= 1 ? items.find((v) => v.id === current.id - 1) : items[items.length - 1];
-  console.log({ prev, current, next });
   return { props: { current, prev, next } };
 };
 
