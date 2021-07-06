@@ -55,7 +55,7 @@ const IndexPage: NextPage = () => (
         </div>
         <div className="w-10/12 font-medium text-black text-sm text-center leading-7">
           <p className="pt-4">
-            今年の芸工祭のテーマにはカメラのフラッシュ機能に擬えて、芸工祭を大学生の一つの大きな思い出としてフラッシュを焚いて、一人一人の人生に保存してほしいという思いを込めました。
+            今年の芸工展のテーマにはカメラのフラッシュ機能に擬えて、芸工展を大学生の一つの大きな思い出としてフラッシュを焚いて、一人一人の人生に保存してほしいという思いを込めました。
           </p>
           <p className="pt-8">
             また、「FUllUSH」には「輝く、駆け抜ける」という意味の「FLASH」や、「元気のある様」という意味の「FULL
