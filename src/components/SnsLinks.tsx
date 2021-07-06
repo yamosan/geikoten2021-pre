@@ -6,7 +6,7 @@ import InstagramIcon from "./parts/InstagramIcon";
 const SnsLinks = () => {
   return (
     <div className="bg-white h-40 flex flex-col justify-center items-center">
-      <p className="font-bold text-sm text-black">OFFICIAL SNS</p>
+      <p className="font-black text-sm text-black">OFFICIAL SNS</p>
       <ul className="flex gap-4 pt-3">
         <li>
           <a href="https://lin.ee/r9XIORr" target="_blank" rel="noopener noreferrer">

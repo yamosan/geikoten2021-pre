@@ -11,10 +11,10 @@ const News: VFC<Props> = ({ text, date }) => {
     <div className="flex justify-between items-end bg-white px-6 py-3">
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
-          <span className="bg-primary text-white px-3 rounded-full text-xxs inline-block">お知らせ</span>
-          <time className="text-sm text-black">{date}</time>
+          <span className="bg-primary font-medium text-white px-3 rounded-full text-xxs inline-block">お知らせ</span>
+          <time className="font-medium text-sm text-black">{date}</time>
         </div>
-        <p className="text-sm text-black">{text}</p>
+        <p className="font-medium text-sm text-black">{text}</p>
       </div>
       <div className="flex-shrink-0 px-2">
         <Arrow color="primary" size="large" />

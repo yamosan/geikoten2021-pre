@@ -20,7 +20,7 @@ const IndexPage: NextPage = () => (
       </section>
       <div className="w-full h-5"></div>
       <section className="flex flex-col items-center bg-white p-5">
-        <h3 className="text-black text-xs mb-5">＼ おすすめコンテンツ ／</h3>
+        <h3 className="font-bold text-black text-xs mb-5">＼ おすすめコンテンツ ／</h3>
         <CardList titles={titles} />
       </section>
 
@@ -28,13 +28,13 @@ const IndexPage: NextPage = () => (
         <h2 className="font-genuine text-primary tracking-wider text-5xl" style={{ lineHeight: 0.8 }}>
           ABOUT
         </h2>
-        <h4 className="text-black text-xs ">芸工展とは？</h4>
+        <h4 className="font-bold text-black text-xs ">芸工展とは？</h4>
         <div className="flex w-full items-center justify-between px-2 py-3">
           <div className="w-28 h-28 bg-gray"></div>
           <div className="w-28 h-28 bg-gray"></div>
           <div className="w-28 h-28 bg-gray"></div>
         </div>
-        <p className="w-10/12 font-medium text-black text-sm text-center leading-7">
+        <p className="w-10/12 font-bold text-black text-sm text-center leading-7">
           芸工生が力を尽くして生み出した作品、見て思わず笑ってしまうステージ企画、オンラインだからこそ味わえるCGの世界など見どころ満載です！
           <span className="inline-block highlight">芸工生全員で作る一つの作品</span>で、 <br />
           コロナの時期だからこそ自分達の能力を
@@ -49,15 +49,15 @@ const IndexPage: NextPage = () => (
         <h2 className="font-genuine text-primary tracking-wider text-5xl" style={{ lineHeight: 0.8 }}>
           THEME
         </h2>
-        <h4 className="text-black text-xs ">今年のテーマ</h4>
+        <h4 className="font-bold text-black text-xs ">今年のテーマ</h4>
         <div className="flex w-full items-center justify-between py-3">
           <div className="w-full h-44 bg-gray"></div>
         </div>
         <div className="w-10/12 font-medium text-black text-sm text-center leading-7">
-          <p className="pt-4">
+          <p className="font-bold pt-4">
             今年の芸工展のテーマにはカメラのフラッシュ機能に擬えて、芸工展を大学生の一つの大きな思い出としてフラッシュを焚いて、一人一人の人生に保存してほしいという思いを込めました。
           </p>
-          <p className="pt-8">
+          <p className="font-bold pt-8">
             また、「FUllUSH」には「輝く、駆け抜ける」という意味の「FLASH」や、「元気のある様」という意味の「FULL
             FLUSH」という言葉も含まれています。芸工生の皆、大学生らしく元気に駆け抜けて行こう！
           </p>
