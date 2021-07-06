@@ -6,7 +6,7 @@ import FirstView from "components/parts/FirstView";
 import TekibusyoLink from "components/TekibusyoLink";
 import QAndAPageLink from "components/QAndAPageLink";
 import Section from "components/Section";
-import PictureFrameList from "components/PictureFrameList";
+import DepartmentsList from "components/DepartmentsList";
 import LinkButton from "components/parts/LinkButton";
 import type { NextPage } from "next";
 import type { Department } from "models/department";
@@ -44,10 +44,10 @@ const Departments: NextPage<Props> = ({ items }) => {
           <QAndAPageLink />
         </div>
         <Section heading="幹部" className="pt-12">
-          <PictureFrameList departments={executive} />
+          <DepartmentsList departments={executive} />
         </Section>
         <Section heading="部署" className="pt-12">
-          <PictureFrameList departments={departments} />
+          <DepartmentsList departments={departments} />
         </Section>
         <div className="py-10">
           <LinkButton href="#">部署配属希望フォームはコチラ</LinkButton>
