@@ -19,7 +19,7 @@ const Header: VFC = () => {
           </a>
         </Link>
       </div>
-      <nav className="z-40">
+      <nav className="z-40 flex items-center">
         {isOpen && (
           <div className="fixed inset-0 bg-primary">
             <GlobalNavModal onLinkClick={toggleOpen} />
