@@ -30,7 +30,7 @@ const IndexPage: NextPage = () => (
       <News text="『部署配属希望』受付開始！〆切は7/7まで" date="2021.6.30" />
     </section>
 
-    <section className="flex flex-col items-center bg-white p-5">
+    <section className="flex flex-col items-center bg-white p-5 mt-5">
       <h3 className="font-bold text-black text-xs mb-5">＼ おすすめコンテンツ ／</h3>
       <CardList titles={titles} />
     </section>
