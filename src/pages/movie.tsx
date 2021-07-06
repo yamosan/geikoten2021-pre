@@ -7,7 +7,7 @@ const IndexPage: NextPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
     <FirstView index="02" title="ムービー" />
     <div className="w-5/6 mx-auto">
-      <p className="text-black text-sm font-normal leading-6 pt-6">
+      <p className="text-black text-sm font-medium leading-6 pt-6">
         映像部署が制作したムービーです。
         <br />
         <span className="highlight">見なきゃ損！</span>
