@@ -9,7 +9,7 @@ const QAndAPageLink = () => {
       </div>
       <div className="">
         <p
-          className="w-max flex flex-col mx-auto text-xs text-white text-left py-2"
+          className="w-max flex flex-col mx-auto font-bold text-xs text-white text-left py-2.5"
           style={{ fontSize: "min(0.75rem, 3vw)" }}
         >
           どんな部署か知りたい人は、

@@ -10,7 +10,7 @@ const TekibusyoLink = () => {
       </div>
       {/* TODO: font-sizeをtailwindで指定したい */}
       <p
-        className="w-max flex flex-col mx-auto text-xs text-secondary text-left py-2"
+        className="w-max flex flex-col mx-auto font-bold text-xs text-secondary text-left py-2.5"
         style={{ fontSize: "min(0.75rem, 3vw)" }}
       >
         どの部署に入ろうか悩んでいる人は、<span className="inline-block">適部署チャートで診断してみよう！</span>
