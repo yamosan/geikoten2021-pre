@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getDepartments } from "utils/departments";
 import Layout from "components/layouts";
 import QAndA from "components/QAndA";
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
@@ -14,116 +15,9 @@ type Props = {
   next: Department;
 };
 
-const _items: Department[] = [
-  {
-    id: 1,
-    name: "芸工祭長",
-    managers: [
-      {
-        name: "脛骨",
-        class: "3O",
-      },
-    ],
-    qAndA: [
-      {
-        question: "どんなお仕事してますか？",
-        answers: [
-          {
-            content: "椅子に座って偉そうに皆に指示をしているよ！",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "副祭長",
-    managers: [
-      {
-        name: "副祭長",
-        class: "3O",
-      },
-    ],
-    qAndA: [
-      {
-        question: "どんなお仕事",
-        answers: [
-          {
-            content: "椅子に座って偉そうに皆に指示をしているよ！",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "書記",
-    managers: [
-      {
-        name: "書記",
-        class: "3O",
-      },
-    ],
-    qAndA: [
-      {
-        question: "お仕事してますか？",
-        answers: [
-          {
-            content: "椅子に座って偉そうに皆に指示をしているよ！",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "総務",
-    managers: [
-      {
-        name: "総務",
-        class: "3O",
-      },
-    ],
-    qAndA: [
-      {
-        question: "どんなお仕事しか？",
-        answers: [
-          {
-            content: "椅子に座って偉そうに皆に指示をしているよ！",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 5,
-    name: "ステージ",
-    managers: [
-      {
-        name: "マチュピチュ",
-        class: "3O",
-      },
-      {
-        name: "おだんござむらい",
-        shortenedName: "おだんご",
-        class: "3N",
-      },
-    ],
-    qAndA: [
-      {
-        question: "どんなお仕事しか？",
-        answers: [
-          {
-            content: "椅子に座って偉そうに皆に指示をしているよ！",
-          },
-        ],
-      },
-    ],
-  },
-];
-
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = _items.map((item) => ({
+  const items = await getDepartments();
+  const paths = items.map((item) => ({
     params: { name: item.name },
   }));
   return { paths, fallback: false };
@@ -131,11 +25,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<Props, { name: string }> = async (ctx) => {
   const name = ctx.params?.name;
-  // const items: Department[] = departments; // TODO: data/departments配下のjson全てを読み込み
-  // const item = items.find(v => v.id === id)
-  const current = _items.find((v) => v.name === name);
-  const next = current.id + 1 <= _items.length ? _items.find((v) => v.id === current.id + 1) : _items[0];
-  const prev = current.id - 1 >= 1 ? _items.find((v) => v.id === current.id - 1) : _items[_items.length - 1];
+  const items = await getDepartments();
+  // TODO: idが欠けてたときにスキップしたい
+  const current = items.find((v) => v.name === name);
+  const next = current.id + 1 <= items.length ? items.find((v) => v.id === current.id + 1) : items[0];
+  const prev = current.id - 1 >= 1 ? items.find((v) => v.id === current.id - 1) : items[items.length - 1];
+  console.log({ prev, current, next });
   return { props: { current, prev, next } };
 };
 

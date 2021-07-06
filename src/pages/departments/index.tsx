@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import { getDepartments } from "utils/departments";
 import Layout from "components/layouts";
 import FirstView from "components/parts/FirstView";
 import TekibusyoLink from "components/TekibusyoLink";
@@ -13,37 +14,9 @@ type Props = {
   items: Department[];
 };
 
-const _items: Department[] = [
-  {
-    id: 1,
-    name: "芸工祭長",
-    managers: [
-      {
-        name: "おだんござむらい",
-        shortenedName: "おだんご",
-        class: "3O",
-      },
-      {
-        name: "マチュピチュ",
-        class: "3N",
-      },
-    ],
-    qAndA: [
-      {
-        question: "どんなお仕事してますか？",
-        answers: [
-          {
-            content: "椅子に座って偉そうに皆に指示をしているよ！",
-          },
-        ],
-      },
-    ],
-  },
-];
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  // const items: Department[] = departments; // TODO: data/departments配下のjson全てを読み込み
-  return { props: { items: _items } };
+  const items = await getDepartments();
+  return { props: { items } };
 };
 
 const Departments: NextPage<Props> = ({ items }) => (
