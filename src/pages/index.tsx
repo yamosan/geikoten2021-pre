@@ -4,23 +4,26 @@ import Layout from "components/layouts";
 import SnsLinks from "components/SnsLinks";
 import News from "components/News";
 import CardList from "components/CardList";
+import Div100vh from "react-div-100vh";
 
 const titles = ["部署紹介", "ムービー", "ゲーム", "部署ブログ"];
 
 const IndexPage: NextPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
-    <section className="relative h-screen">
-      <Image src="/img/main_visual.png" alt="メインビジュアル" layout="fill" className="object-cover" />
+    <section className="relative">
+      <Div100vh>
+        <Image src="/img/main_visual.png" alt="メインビジュアル" layout="fill" className="object-cover" />
 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <Image src="/img/logo.png" alt="メインビジュアル" width={187} height={192} />
-      </div>
-
-      <div className="absolute bottom-0 h-6 w-full bg-bg">
-        <div className="relative">
-          <div className="absolute w-full h-6 bg-bg transform -skew-y-2 -translate-y-3"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <Image src="/img/logo.png" alt="メインビジュアル" width={187} height={192} />
         </div>
-      </div>
+
+        <div className="absolute bottom-0 h-6 w-full bg-bg">
+          <div className="relative">
+            <div className="absolute w-full h-6 bg-bg transform -skew-y-2 -translate-y-3"></div>
+          </div>
+        </div>
+      </Div100vh>
     </section>
 
     <section>
