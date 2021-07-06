@@ -12,11 +12,13 @@ type Props = TQAndA & {
 const QAndA: VFC<Props> = (props) => {
   return (
     <div className="flex flex-col gap-3">
-      <SpeechBubble>
-        {props.index && <span className="text-primary">{`Q${props.index}. `}</span>}
-        {props.question}
-      </SpeechBubble>
-      <div className="flex items-start gap-3">
+      <div className="mr-14">
+        <SpeechBubble>
+          {props.index && <span className="text-primary">{`Q${props.index}. `}</span>}
+          {props.question}
+        </SpeechBubble>
+      </div>
+      <div className="flex justify-end gap-3">
         <div className="min-w-0 flex flex-col gap-3">
           {props.answers.map((answer, i) => (
             <SpeechBubble outline="primary" reversed key={i.toString()}>

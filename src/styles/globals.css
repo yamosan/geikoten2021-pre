@@ -12,15 +12,15 @@
 
 /* TODO: themeがの色使いたい。linear-gradientを@applyで書きたい。 */
 .highlight {
-  @apply font-bold text-black;
-  background: linear-gradient(transparent 60%, #d3d977 50%);
+  @apply font-medium text-black;
+  background: linear-gradient(transparent 75%, #d3d977 50%);
 }
 
 /* TODO: after(before)擬似要素を設定できるプラグイン */
 .speech-bubble,
 .speech-bubble--reversed {
   position: relative;
-  padding: 14px 18px;
+  padding: 12px 16px;
   min-width: 120px;
   max-width: 100%;
   min-height: 50px;

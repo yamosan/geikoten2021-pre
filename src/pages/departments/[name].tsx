@@ -68,7 +68,7 @@ const DepartmentId: NextPage<Props> = (props) => {
                 {`${manager.class}・${manager.name}`}
               </h4>
             ))}
-            <div className="mt-4 bg-white w-11/12 rounded-2xl mx-auto px-5 pt-7 pb-12">
+            <div className="flex flex-col gap-y-7 mt-4 bg-white w-11/12 rounded-2xl mx-auto px-5 pt-7 pb-12">
               {current.qAndA.map((v, i) => (
                 <QAndA
                   index={i + 1}
