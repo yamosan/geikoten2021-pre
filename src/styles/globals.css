@@ -12,8 +12,8 @@
 
 /* TODO: themeがの色使いたい。linear-gradientを@applyで書きたい。 */
 .highlight {
-  @apply font-bold text-black;
-  background: linear-gradient(transparent 75%, #d3d977 50%);
+  @apply font-bold text-black leading-normal;
+  background: linear-gradient(transparent 65%, #d3d977 65%);
 }
 
 /* TODO: after(before)擬似要素を設定できるプラグイン */
