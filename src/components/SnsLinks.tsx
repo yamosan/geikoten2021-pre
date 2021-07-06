@@ -9,7 +9,7 @@ const SnsLinks = () => {
       <p className="font-bold text-sm text-black">OFFICIAL SNS</p>
       <ul className="flex gap-4 pt-3">
         <li>
-          <a href="https://lin.ee/lTVP1nb">
+          <a href="https://lin.ee/r9XIORr">
             <Image
               src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
               alt="友だち追加"
