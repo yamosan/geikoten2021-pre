@@ -1,17 +1,20 @@
 import React, { VFC, useState } from "react";
 import useBackfaceFixed from "hooks/useBackfaceFixed";
+import useOnScrolling from "hooks/useOnScrolling";
 import Link from "next/link";
-import Image from "next/image";
 import HamburgerMenu from "components/parts/HamburgerMenu";
 import GlobalNavModal from "./GlobalNavModal";
+import SiteLogo from "components/parts/SiteLogo";
+import clsx from "clsx";
 
 const Header: VFC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => {
     setIsOpen((state) => !state);
   };
-
   useBackfaceFixed(isOpen);
+  const isScrolled = useOnScrolling();
+  const transition = clsx("transform transition duration-500 ease-in-out");
 
   return (
     <>
@@ -19,7 +22,7 @@ const Header: VFC = () => {
         <div className="z-50">
           <Link href="/">
             <a className="flex items-center">
-              <Image src="/img/site_logo.png" alt="サイトロゴ" width={161} height={16} layout="fixed" />
+              <SiteLogo color={isScrolled ? "black" : "white"} className={transition} />
             </a>
           </Link>
         </div>
@@ -29,7 +32,12 @@ const Header: VFC = () => {
               <GlobalNavModal onLinkClick={toggleOpen} />
             </div>
           )}
-          <HamburgerMenu isOpen={isOpen} onClick={toggleOpen} />
+          <HamburgerMenu
+            transition={transition}
+            isOpen={isOpen}
+            onClick={toggleOpen}
+            color={isScrolled ? "black" : "white"}
+          />
         </nav>
       </header>
     </>
