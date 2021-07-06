@@ -22,7 +22,7 @@ const Header: VFC = () => {
       <nav className="z-40">
         {isOpen && (
           <div className="fixed inset-0 bg-primary">
-            <GlobalNavModal />
+            <GlobalNavModal onLinkClick={toggleOpen} />
           </div>
         )}
         <HamburgerMenu isOpen={isOpen} onClick={toggleOpen} />
