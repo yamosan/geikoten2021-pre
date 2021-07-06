@@ -3,10 +3,8 @@ import Image from "next/image";
 import Layout from "components/layouts";
 import SnsLinks from "components/SnsLinks";
 import News from "components/News";
-import CardList from "components/CardList";
+import ContentsNav from "components/ContentsNav";
 import Div100vh from "react-div-100vh";
-
-const titles = ["部署紹介", "ムービー", "ゲーム", "部署ブログ"];
 
 const IndexPage: NextPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
@@ -32,7 +30,7 @@ const IndexPage: NextPage = () => (
 
     <section className="flex flex-col items-center bg-white p-5 mt-5">
       <h3 className="font-bold text-black text-xs mb-5">＼ おすすめコンテンツ ／</h3>
-      <CardList titles={titles} />
+      <ContentsNav />
     </section>
 
     <section className="mt-16 flex flex-col items-center">
