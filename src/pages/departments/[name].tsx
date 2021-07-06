@@ -62,9 +62,9 @@ const DepartmentId: NextPage<Props> = (props) => {
         {/* fixedとmt-96 */}
         <div className="relative mt-0">
           <div className="w-full bg-bg rounded-3xl pt-6 pb-20">
-            <h2 className="font-medium text-2xl text-center text-secondary py-0.5">{current.name}</h2>
+            <h2 className="font-bold text-3xl text-center text-secondary py-1.5">{current.name}</h2>
             {current.managers.map((manager, i) => (
-              <h4 key={i.toString()} className="font-medium text-base text-center text-black">
+              <h4 key={i.toString()} className="font-bold text-base text-center text-black">
                 {`${manager.class}・${manager.name}`}
               </h4>
             ))}
@@ -79,7 +79,7 @@ const DepartmentId: NextPage<Props> = (props) => {
                 />
               ))}
             </div>
-            <div className="text-center text-black mt-6">
+            <div className="text-center text-black font-bold mt-6">
               <Link href={"/departments"}>一覧へ</Link>
             </div>
             <div className="w-5/6 mx-auto mt-6">

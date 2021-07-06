@@ -24,7 +24,7 @@ const SpeechBubble: VFC<Props> = (props) => {
   return (
     <>
       <div className={classes}>
-        <p className="text-black text-sm table m-auto text-left leading-6">{props.children}</p>
+        <p className="font-medium text-black text-sm table m-auto text-left leading-6">{props.children}</p>
       </div>
     </>
   );

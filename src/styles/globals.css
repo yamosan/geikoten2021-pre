@@ -12,7 +12,7 @@
 
 /* TODO: themeがの色使いたい。linear-gradientを@applyで書きたい。 */
 .highlight {
-  @apply font-medium text-black;
+  @apply font-bold text-black;
   background: linear-gradient(transparent 75%, #d3d977 50%);
 }
 
