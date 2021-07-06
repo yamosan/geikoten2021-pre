@@ -2,6 +2,8 @@ import { promises as fs } from "fs";
 import path from "path";
 import type { Department } from "models/department";
 
+export const EXECUTIVE_ID = [1, 2, 3, 4, 5];
+
 export async function getDepartments() {
   const departmentsDirectory = path.join(process.cwd(), "src", "data", "departments");
   const filenames = await fs.readdir(departmentsDirectory);
