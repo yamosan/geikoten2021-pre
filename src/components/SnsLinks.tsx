@@ -9,7 +9,7 @@ const SnsLinks = () => {
       <p className="font-bold text-sm text-black">OFFICIAL SNS</p>
       <ul className="flex gap-4 pt-3">
         <li>
-          <a href="https://lin.ee/lTVP1nb">
+          <a href="https://lin.ee/r9XIORr" target="_blank" rel="noopener noreferrer">
             <Image
               src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
               alt="友だち追加"
@@ -20,10 +20,14 @@ const SnsLinks = () => {
           </a>
         </li>
         <li>
-          <TwitterIcon className="w-7 h-7" />
+          <a href="https://twitter.com/geik0" target="_blank" rel="noopener noreferrer">
+            <TwitterIcon className="w-7 h-7" />
+          </a>
         </li>
         <li>
-          <InstagramIcon className="w-7 h-7" />
+          <a href="https://instagram.com/geikoten2021" target="_blank" rel="noopener noreferrer">
+            <InstagramIcon className="w-7 h-7" />
+          </a>
         </li>
       </ul>
     </div>
