@@ -4,7 +4,7 @@ module.exports = {
   images: {
     domains: ["scdn.line-apps.com"],
     loader: "imgix",
-    path: "",
+    path: "/",
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -14,6 +14,6 @@ module.exports = {
     }
     return config;
   },
-  trailingSlash: true,
-  basePath: isProd ? "/out" : "",
+  trailingSlash: isProd,
+  basePath: isProd ? process.env.NEXT_PUBLIC_BASE_PATH : "",
 };
