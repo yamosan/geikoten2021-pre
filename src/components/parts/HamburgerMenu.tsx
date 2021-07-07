@@ -18,7 +18,6 @@ const HamburgerMenu: VFC<Props> = ({ onClick, isOpen, color, transition }) => {
       })}
     >
       <div className="absolute left-1/2 top-3.5 transform -translate-x-1/2 -translate-y-1/2">
-        <span className="sr-only">Open main menu</span>
         <div className="block w-5">
           <div
             aria-hidden="true"
