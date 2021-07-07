@@ -39,7 +39,7 @@ const Departments: NextPage<Props> = ({ items }) => {
           <br />
           <span className="highlight">気になる部署</span>に所属して、みんなで芸工祭を盛り上げよう！
         </p>
-        <div className="flex flex-col gap-3 pt-6">
+        <div className="flex flex-col space-y-3 pt-6">
           <TekibusyoLink />
           <QAndAPageLink />
         </div>

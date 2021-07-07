@@ -9,8 +9,8 @@ type Props = {
 const News: VFC<Props> = ({ text, date }) => {
   return (
     <div className="flex justify-between items-end bg-white px-6 py-3">
-      <div className="flex flex-col gap-1">
-        <div className="flex items-center gap-2">
+      <div className="flex flex-col space-y-1">
+        <div className="flex items-center space-x-2">
           <span className="bg-primary font-medium text-white px-3 rounded-full text-xxs inline-block">お知らせ</span>
           <time className="font-medium text-sm text-black">{date}</time>
         </div>

@@ -26,7 +26,7 @@ const GlobalNavModal: VFC<Props> = (props) => {
 
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center">
-      <ul className="flex flex-col items-center gap-8 pb-24">
+      <ul className="flex flex-col items-center space-x-8 pb-24">
         {PATHS.map(({ text, path }) => (
           <li key={path}>
             <button onClick={(e) => handleClick(e, path)} className="font-black text-white text-2xl">

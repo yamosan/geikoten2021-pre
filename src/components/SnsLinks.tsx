@@ -6,7 +6,7 @@ const SnsLinks = () => {
   return (
     <div className="bg-white h-40 flex flex-col justify-center items-center">
       <p className="font-black text-sm text-black">OFFICIAL SNS</p>
-      <ul className="flex gap-4 pt-3">
+      <ul className="flex space-x-4 pt-3">
         <li>
           <a href="https://lin.ee/r9XIORr" target="_blank" rel="noopener noreferrer">
             {/* eslint-disable-next-line @next/next/no-img-element */}

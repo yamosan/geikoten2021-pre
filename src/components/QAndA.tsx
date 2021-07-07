@@ -11,7 +11,7 @@ type Props = TQAndA & {
 
 const QAndA: VFC<Props> = (props) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col space-y-3">
       {/* ↓ Question */}
       <div className="mr-14">
         <SpeechBubble>
@@ -20,8 +20,8 @@ const QAndA: VFC<Props> = (props) => {
         </SpeechBubble>
       </div>
       {/* ↓ Answer */}
-      <div className="flex justify-end gap-3">
-        <div className="min-w-0 flex flex-col gap-3">
+      <div className="flex justify-end space-x-3">
+        <div className="min-w-0 flex flex-col space-y-3">
           {props.answers.map((answer, i) => (
             <SpeechBubble outline="primary" reversed key={i.toString()}>
               <Highlighter
@@ -38,7 +38,7 @@ const QAndA: VFC<Props> = (props) => {
           <div className="relative w-12 h-12 bg-gray rounded-md overflow-hidden">
             <Image src="/img/400x250.png" alt="回答者" layout="fill" className="object-cover" />
           </div>
-          <div className="pt-1 flex flex-col items-center gap-1">
+          <div className="pt-1 flex flex-col items-center space-y-1">
             {props.names.map((name, i) => (
               <p key={i.toString()} className="text-black font-medium text-xxs leading-none">
                 {name}
