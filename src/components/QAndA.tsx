@@ -1,5 +1,5 @@
 import React, { VFC } from "react";
-import Image from "next/image";
+import Image from "components/parts/Image";
 import { QAndA as TQAndA } from "models/qAndA";
 import SpeechBubble from "components/parts/SpeechBubble";
 import Highlighter from "react-highlight-words";

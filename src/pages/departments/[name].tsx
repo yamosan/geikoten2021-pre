@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "components/parts/Image";
 import Link from "next/link";
 import { getDepartments } from "utils/departments";
 import Layout from "components/layouts";

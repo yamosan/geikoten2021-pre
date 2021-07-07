@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/image";
+import Image from "components/parts/Image";
 import Layout from "components/layouts";
 import SnsLinks from "components/SnsLinks";
 import News from "components/News";

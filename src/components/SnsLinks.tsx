@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import TwitterIcon from "./parts/TwitterIcon";
 import InstagramIcon from "./parts/InstagramIcon";
 
@@ -10,12 +9,11 @@ const SnsLinks = () => {
       <ul className="flex gap-4 pt-3">
         <li>
           <a href="https://lin.ee/r9XIORr" target="_blank" rel="noopener noreferrer">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
               alt="友だち追加"
-              className="h-7"
-              width={90}
-              height={28}
+              style={{ width: "90px", height: "28px" }}
             />
           </a>
         </li>

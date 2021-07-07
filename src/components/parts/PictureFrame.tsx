@@ -1,5 +1,5 @@
 import React, { ReactNode, VFC } from "react";
-import Image from "next/image";
+import Image from "components/parts/Image";
 
 type Props = {
   title: string;

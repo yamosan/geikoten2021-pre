@@ -1,5 +1,5 @@
 import React, { VFC } from "react";
-import Image from "next/image";
+import Image from "components/parts/Image";
 import Arrow from "components/parts/Arrow";
 
 type Props = {
