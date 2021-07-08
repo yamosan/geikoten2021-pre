@@ -1,6 +1,7 @@
 {
   "id": 8,
-  "name": "グラフィック",
+  "displayName": "グラフィック",
+  "name": "graphic",
   "managers": [
     {
       "name": "ラブマシーン",

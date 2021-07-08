@@ -1,6 +1,7 @@
 {
   "id": 13,
-  "name": "インテリア",
+  "displayName": "インテリア",
+  "name": "interior",
   "managers": [
     {
       "name": "ロック・リー",

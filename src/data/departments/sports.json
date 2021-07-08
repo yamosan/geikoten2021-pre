@@ -1,6 +1,7 @@
 {
   "id": 18,
-  "name": "運動会",
+  "displayName": "運動会",
+  "name": "sports",
   "managers": [
     {
       "name": "ラモス",

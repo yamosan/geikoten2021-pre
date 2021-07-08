@@ -1,6 +1,7 @@
 {
   "id": 6,
-  "name": "Web",
+  "displayName": "Web",
+  "name": "web",
   "managers": [
     {
       "name": "212",

@@ -1,6 +1,7 @@
 {
   "id": 11,
-  "name": "ワークショップ",
+  "displayName": "ワークショップ",
+  "name": "workshop",
   "managers": [
     {
       "name": "スイレン",

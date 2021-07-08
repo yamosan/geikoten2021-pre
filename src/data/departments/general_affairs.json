@@ -1,6 +1,7 @@
 {
   "id": 5,
-  "name": "総務",
+  "displayName": "総務",
+  "name": "general_affairs",
   "managers": [
     {
       "name": "シャウエッセン",

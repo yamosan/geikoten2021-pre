@@ -1,6 +1,7 @@
 {
   "id": 2,
-  "name": "副展長",
+  "displayName": "副展長",
+  "name": "sub_leader",
   "managers": [
     {
       "name": "はんぶんこ",

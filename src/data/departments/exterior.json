@@ -1,6 +1,7 @@
 {
   "id": 14,
-  "name": "エクステリア",
+  "displayName": "エクステリア",
+  "name": "exterior",
   "managers": [
     {
       "name": "タピオカ",

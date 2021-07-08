@@ -1,6 +1,7 @@
 {
   "id": 9,
-  "name": "PA",
+  "displayName": "PA",
+  "name": "pa",
   "managers": [
     {
       "name": "ベニ",

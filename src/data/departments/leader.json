@@ -1,6 +1,7 @@
 {
   "id": 1,
-  "name": "芸工展長",
+  "displayName": "芸工展長",
+  "name": "leader",
   "managers": [
     {
       "name": "脛骨",

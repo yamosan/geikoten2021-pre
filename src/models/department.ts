@@ -4,6 +4,7 @@ type TClass = "3M" | "3N" | "3O";
 export type Department = {
   id: number;
   name: string;
+  displayName: string;
   managers: {
     name: string;
     shortenedName?: string;

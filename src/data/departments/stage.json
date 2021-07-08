@@ -1,6 +1,7 @@
 {
   "id": 10,
-  "name": "ステージ",
+  "displayName": "ステージ",
+  "name": "stage",
   "managers": [
     {
       "name": "おだんござむらい",

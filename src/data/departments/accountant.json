@@ -1,6 +1,7 @@
 {
   "id": 3,
-  "name": "会計",
+  "displayName": "会計",
+  "name": "accountant",
   "managers": [
     {
       "name": "グリマネ",

@@ -1,6 +1,7 @@
 {
   "id": 15,
-  "name": "ブース",
+  "displayName": "ブース",
+  "name": "booth",
   "managers": [
     {
       "name": "エマ",

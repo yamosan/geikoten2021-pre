@@ -1,6 +1,7 @@
 {
   "id": 7,
-  "name": "映像",
+  "displayName": "映像",
+  "name": "video",
   "managers": [
     {
       "name": "風月課長",
