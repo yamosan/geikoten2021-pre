@@ -59,8 +59,8 @@ const IndexPage: NextPage = () => (
         THEME
       </h2>
       <h4 className="font-bold text-black text-xs ">今年のテーマ</h4>
-      <div className="flex w-full items-center justify-between py-3">
-        <div className="w-full h-44 bg-gray"></div>
+      <div className="w-full py-3">
+        <Image src="/img/theme.png" alt="今年のテーマ" layout="responsive" width={378} height={188} />
       </div>
       <div className="w-10/12 font-medium text-black text-sm text-center leading-7">
         <p className="font-bold pt-4">
