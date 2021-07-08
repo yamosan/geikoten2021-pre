@@ -4,7 +4,7 @@ import { Department } from "models/department";
 import PictureFrame from "./parts/PictureFrame";
 
 type Props = {
-  departments: Pick<Department, "name" | "managers">[];
+  departments: Pick<Department, "name" | "displayName" | "managers">[];
 };
 
 const PictureFrameList: VFC<Props> = ({ departments }) => {
@@ -13,7 +13,7 @@ const PictureFrameList: VFC<Props> = ({ departments }) => {
       {departments.map((v, i) => (
         <Link href={`/departments/${v.name}`} key={i.toString()}>
           <a>
-            <PictureFrame title={v.name}>
+            <PictureFrame title={v.displayName}>
               {v.managers.map((manager, j) => (
                 <h6 key={j.toString()} className="text-black font-bold text-xs">
                   {manager.class + "." + manager.name}

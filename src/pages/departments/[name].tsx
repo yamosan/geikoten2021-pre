@@ -67,7 +67,7 @@ const DepartmentId: NextPage<Props> = (props) => {
         {/* fixedとmt-96 */}
         <div className="relative mt-0">
           <div className="w-full bg-bg rounded-3xl pt-6 pb-20">
-            <h2 className="font-bold text-3xl text-center text-secondary py-1.5">{current.name}</h2>
+            <h2 className="font-bold text-3xl text-center text-secondary py-1.5">{current.displayName}</h2>
             {current.managers.map((manager, i) => (
               <h4 key={i.toString()} className="font-bold text-base text-center text-black">
                 {`${manager.class}・${manager.name}`}
