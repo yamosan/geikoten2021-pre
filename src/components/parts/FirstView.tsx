@@ -10,7 +10,14 @@ const FirstView: VFC<Props> = ({ index, title }) => {
   return (
     <div className="relative overflow-hidden">
       <figure className="bg-gray w-full h-60 flex justify-center items-center">
-        <Image src="/img/page_thumbnail.png" alt="ページのサムネイル" layout="fill" className="object-cover" />
+        <Image
+          src="/img/page_thumbnail.png"
+          alt="ページのサムネイル"
+          layout="fill"
+          quality={100}
+          priority={true}
+          className="object-cover"
+        />
       </figure>
       <div className="absolute top-0 left-0 right-0 bottom-0 py-1 px-4 flex items-end">
         <div className="w-full flex items-center space-x-3">

@@ -10,7 +10,7 @@ const IndexPage: NextPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
     <section className="relative">
       <Div100vh>
-        <Image src="/img/main_visual.png" alt="メインビジュアル" layout="fill" className="object-cover" />
+        <Image src="/img/hero.png" alt="メインビジュアル" layout="fill" priority={true} className="object-cover" />
 
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Image src="/img/logo.png" alt="メインビジュアル" width={187} height={192} />
