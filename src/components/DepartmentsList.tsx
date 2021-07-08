@@ -13,7 +13,7 @@ const PictureFrameList: VFC<Props> = ({ departments }) => {
       {departments.map((v, i) => (
         <Link href={`/departments/${v.name}`} key={i.toString()}>
           <a>
-            <PictureFrame title={v.displayName} src={`/img/contents/departments/managers/mini/${v.name}.png`}>
+            <PictureFrame title={v.displayName} src={`/img/contents/departments/${v.name}/mini.png`}>
               {v.managers.map((manager, j) => (
                 <h6 key={j.toString()} className="text-black font-bold text-xs">
                   {manager.class + "." + manager.name}

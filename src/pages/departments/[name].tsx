@@ -50,11 +50,12 @@ const DepartmentId: NextPage<Props> = (props) => {
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-20 left-1/2 -translate-x-1/2 transform rotate-6">
               <Image
-                src={`/img/managers/${current.name}.png`}
+                src={`/img/contents/departments/${current.name}/main.png`}
                 alt={current.name}
                 width={254}
                 height={382}
                 layout="fixed"
+                priority={true}
               />
             </div>
           </div>
