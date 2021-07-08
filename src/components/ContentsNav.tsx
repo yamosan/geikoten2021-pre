@@ -9,6 +9,11 @@ const CONTENTS = [
     isDisabled: false,
   },
   {
+    title: "部署チャート",
+    href: "/",
+    isDisabled: true,
+  },
+  {
     title: "ムービー",
     href: "/movie",
     isDisabled: false,
@@ -18,16 +23,11 @@ const CONTENTS = [
     href: "/",
     isDisabled: true,
   },
-  {
-    title: "部署ブログ",
-    href: "/",
-    isDisabled: true,
-  },
 ];
 
 const CardList = () => {
   return (
-    <div className="grid grid-cols-2 justify-center justify-items-center gap-6 w-max">
+    <nav className="grid grid-cols-2 justify-center justify-items-center gap-6 w-max">
       {CONTENTS.map(({ title, href, isDisabled }, i) => {
         return !isDisabled ? (
           <Link href={href} key={title}>
@@ -39,7 +39,7 @@ const CardList = () => {
           <Card title={title} batch={(i + 1).toString().padStart(2, "0")} key={i.toString()} />
         );
       })}
-    </div>
+    </nav>
   );
 };
 
