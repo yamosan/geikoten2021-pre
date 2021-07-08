@@ -40,7 +40,13 @@ const DepartmentId: NextPage<Props> = (props) => {
     <Layout title={`Department Detail | Next.js + TypeScript Example`}>
       <article className="relative">
         <div className="h-96 relative">
-          <Image src={`/img/photo_bg.png`} alt="背景" width={375} height={520} layout="responsive" />
+          <Image
+            src={`/img/contents/departments/q_and_a_bg.png`}
+            alt="背景"
+            width={375}
+            height={520}
+            layout="responsive"
+          />
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-20 left-1/2 -translate-x-1/2 transform rotate-6">
               <Image
