@@ -6,25 +6,25 @@ const CONTENTS = [
   {
     title: "部署紹介",
     href: "/departments",
-    imgSrc: "/img/content.png",
+    imgSrc: "/img/contents/departments/thumbnail.jpg",
     isDisabled: false,
   },
   {
     title: "適部署チャート",
     href: "/",
-    imgSrc: "/img/content.png",
+    imgSrc: "/img/contents/tekibusyo/thumbnail.jpg",
     isDisabled: true,
   },
   {
     title: "ムービー",
     href: "/movie",
-    imgSrc: "/img/content.png",
+    imgSrc: "/img/contents/movie/thumbnail.jpg",
     isDisabled: false,
   },
   {
     title: "ゲーム",
     href: "/",
-    imgSrc: "/img/content.png",
+    imgSrc: "/img/contents/game/thumbnail.jpg",
     isDisabled: true,
   },
 ];
