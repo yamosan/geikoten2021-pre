@@ -10,7 +10,7 @@ const CONTENTS = [
     isDisabled: false,
   },
   {
-    title: "部署チャート",
+    title: "適部署チャート",
     href: "/",
     imgSrc: "/img/content.png",
     isDisabled: true,
