@@ -4,15 +4,16 @@ import Image from "components/parts/Image";
 type Props = {
   index: string;
   title: string;
+  src: string;
 };
 
-const FirstView: VFC<Props> = ({ index, title }) => {
+const FirstView: VFC<Props> = ({ index, title, src }) => {
   return (
     <div className="relative overflow-hidden">
       <figure className="bg-gray w-full h-60 flex justify-center items-center">
         <Image
-          src="/img/page_thumbnail.png"
-          alt="ページのサムネイル"
+          src={src}
+          alt={`${title}ページのサムネイル`}
           layout="fill"
           quality={100}
           priority={true}

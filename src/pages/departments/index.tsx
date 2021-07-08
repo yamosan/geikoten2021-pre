@@ -32,7 +32,7 @@ const Departments: NextPage<Props> = ({ items }) => {
 
   return (
     <Layout title="Departments | Next.js + TypeScript Example">
-      <FirstView index="01" title="部署紹介" />
+      <FirstView index="01" title="部署紹介" src="/img/contents/departments/hero.png" />
       <div className="w-5/6 mx-auto pt-8">
         <p className="text-black text-sm font-medium leading-6">
           芸工祭には全部で19の部署長と幹部が居ます。
