@@ -11,6 +11,12 @@
   font-weight: 400;
 }
 
+@layer utilities {
+  .text-bg-blur {
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+  }
+}
+
 /* TODO: themeがの色使いたい。linear-gradientを@applyで書きたい。 */
 .highlight {
   @apply font-bold text-black leading-normal;
