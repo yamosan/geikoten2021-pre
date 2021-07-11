@@ -126,7 +126,7 @@ const DepartmentId: NextPage<Props> = (props) => {
               <div className="absolute top-0 left-0 w-full h-full">
                 <div className="absolute top-20 left-1/2 -translate-x-1/2 transform rotate-6">
                   <Image
-                    src={`/img/contents/departments/${current.name}/main.png`}
+                    src={`/img/contents/departments/${current.name}/main.jpg`}
                     alt={current.name}
                     width={254}
                     height={382}
@@ -159,6 +159,7 @@ const DepartmentId: NextPage<Props> = (props) => {
                       names={current.managers.map((v) => v.shortenedName || v.name)}
                       question={v.question}
                       answers={v.answers}
+                      profileImage={`/img/contents/departments/${current.name}/mini.jpg`}
                       key={i.toString()}
                     />
                   ))}
