@@ -36,7 +36,7 @@ const QAndA: VFC<Props> = (props) => {
         </div>
         <div className="flex-shrink-0 flex flex-col items-center">
           <div className="relative w-12 h-12 bg-gray rounded-md overflow-hidden">
-            <Image src="/img/400x250.png" alt="回答者" layout="fill" className="object-cover" />
+            <Image src="/img/theme.png" alt="回答者" layout="fill" className="object-cover" />
           </div>
           <div className="pt-1 flex flex-col items-center space-y-1">
             {props.names.map((name, i) => (

@@ -1,7 +1,6 @@
 import { GetStaticProps } from "next";
 import { useMemo } from "react";
 import { getDepartments, EXECUTIVE_ID } from "utils/departments";
-import Layout from "components/layouts";
 import FirstView from "components/parts/FirstView";
 import TekibusyoLink from "components/TekibusyoLink";
 import QAndAPageLink from "components/QAndAPageLink";
@@ -31,7 +30,7 @@ const Departments: NextPage<Props> = ({ items }) => {
   }, [items]);
 
   return (
-    <Layout title="Departments | Next.js + TypeScript Example">
+    <>
       <FirstView index="01" title="部署紹介" src="/img/contents/departments/hero.png" />
       <div className="w-5/6 mx-auto pt-8">
         <p className="text-black text-sm font-medium leading-6">
@@ -53,7 +52,7 @@ const Departments: NextPage<Props> = ({ items }) => {
           <LinkButton href="#">部署配属希望フォームはコチラ</LinkButton>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

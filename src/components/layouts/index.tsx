@@ -8,7 +8,7 @@ type Props = {
   title?: string;
 };
 
-const Layout: VFC<Props> = ({ children, title = "This is the default title" }) => (
+const Layout: VFC<Props> = ({ children, title = "GEIKO TEN 2021" }) => (
   <>
     <Head>
       <title>{title}</title>

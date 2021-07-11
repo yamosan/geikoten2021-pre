@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import Image from "components/parts/Image";
-import Layout from "components/layouts";
 import SnsLinks from "components/SnsLinks";
 import News from "components/News";
 import ContentsNav from "components/ContentsNav";
 import Div100vh from "react-div-100vh";
 
 const IndexPage: NextPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
+  <>
     <section className="relative">
       <Div100vh>
         <Image src="/img/hero.png" alt="メインビジュアル" layout="fill" priority={true} className="object-cover" />
@@ -74,6 +73,6 @@ const IndexPage: NextPage = () => (
     </section>
 
     <SnsLinks />
-  </Layout>
+  </>
 );
 export default IndexPage;

@@ -1,27 +1,34 @@
 import React, { VFC } from "react";
-import Link from "next/link";
 
 type Props = {
-  next: string;
-  prev: string;
+  onNextClick: () => void;
+  onPrevClick: () => void;
 };
 
-const Paginator: VFC<Props> = ({ next, prev }) => {
+const Paginator: VFC<Props> = ({ onNextClick, onPrevClick }) => {
   return (
     <div className="flex justify-between items-center">
-      {prev && (
-        <Link href={prev}>
-          <a className="h-10 w-10 flex justify-center items-center">
-            <div className="triangle-l"></div>
-          </a>
-        </Link>
+      {onPrevClick && (
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            onPrevClick();
+          }}
+          className="h-10 w-10 flex justify-center items-center"
+        >
+          <div className="triangle-l"></div>
+        </button>
       )}
-      {next && (
-        <Link href={next}>
-          <a className="h-10 w-10 flex justify-center items-center">
-            <div className="triangle-r"></div>
-          </a>
-        </Link>
+      {onNextClick && (
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            onNextClick();
+          }}
+          className="h-10 w-10 flex justify-center items-center"
+        >
+          <div className="triangle-r"></div>
+        </button>
       )}
     </div>
   );
