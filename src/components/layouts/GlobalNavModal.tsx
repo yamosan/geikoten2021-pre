@@ -39,7 +39,6 @@ const GlobalNavModal: VFC<Props> = (props) => {
     if (openCount === 1) {
       PATHS.forEach(({ path }) => {
         if (router.pathname !== path) {
-          console.log("prefetch", path);
           router.prefetch(path);
         }
       });
