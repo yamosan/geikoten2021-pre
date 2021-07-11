@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 const IndexPage: NextPage = () => (
   <>
     <FirstView index="03" title="ムービー" src="/img/contents/movie/hero.png" />
-    <div className="w-5/6 mx-auto">
+    <div className="w-5/6 mx-auto pb-10">
       <p className="text-black text-sm font-medium leading-6 pt-6">
         映像部署が制作したムービーです。
         <br />
