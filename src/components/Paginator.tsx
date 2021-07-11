@@ -9,12 +9,24 @@ const Paginator: VFC<Props> = ({ onNextClick, onPrevClick }) => {
   return (
     <div className="flex justify-between items-center">
       {onPrevClick && (
-        <button onClick={onPrevClick} className="h-10 w-10 flex justify-center items-center">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            onPrevClick();
+          }}
+          className="h-10 w-10 flex justify-center items-center"
+        >
           <div className="triangle-l"></div>
         </button>
       )}
       {onNextClick && (
-        <button onClick={onNextClick} className="h-10 w-10 flex justify-center items-center">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            onNextClick();
+          }}
+          className="h-10 w-10 flex justify-center items-center"
+        >
           <div className="triangle-r"></div>
         </button>
       )}

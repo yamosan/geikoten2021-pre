@@ -2,19 +2,33 @@ import Image from "components/parts/Image";
 import Link from "next/link";
 import { getDepartments } from "utils/departments";
 import QAndA from "components/QAndA";
-import type { NextPage, GetStaticProps } from "next";
+import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import type { Department } from "models/department";
 import LinkButton from "components/parts/LinkButton";
 import TekibusyoLink from "components/TekibusyoLink";
 import Paginator from "components/Paginator";
 import { useCallback, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 type Props = {
   items: Department[];
 };
 
 type Direction = -1 | 0 | 1;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const items = await getDepartments();
+  const paths = items.map((item) => ({
+    params: { name: item.name },
+  }));
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const items = await getDepartments();
+  return { props: { items } };
+};
 
 const variants = {
   enter: (direction: number) => {
@@ -37,33 +51,32 @@ const variants = {
   },
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const items = await getDepartments();
-  return { props: { items } };
+const swipeConfidenceThreshold = 1000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
 };
 
 const DepartmentId: NextPage<Props> = (props) => {
+  const router = useRouter();
   const departments = props.items;
   const [[page, direction], setPage] = useState([0, 0]);
 
   const paginate = useCallback(
     (newDirection: Direction) => {
-      setPage(([prevPage, _]) => {
-        const offset = (prevPage + newDirection) % departments.length;
-        const nextPage = offset >= 0 ? offset : departments.length + offset;
-        return [nextPage, newDirection];
-      });
+      const offset = (page + newDirection) % departments.length;
+      const nextPage = offset >= 0 ? offset : departments.length + offset;
+      setPage([nextPage, newDirection]);
+      router.push(`/departments/${departments[nextPage].name}`, undefined, { scroll: false });
     },
-    [departments]
+    [departments, page, router]
   );
 
   const current = departments[page];
-  console.log(direction);
   return (
     <>
-      <article className="relative">
+      <article className="w-screen relative">
         {/* gallery */}
-        <div className="relative overflow-hidden" style={{ height: "60vh" }}>
+        <div className="relative overflow-hidden" style={{ height: "62vh" }}>
           <Image
             src={`/img/contents/departments/q_and_a_bg.png`}
             alt="背景"
@@ -82,6 +95,18 @@ const DepartmentId: NextPage<Props> = (props) => {
               transition={{
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
               }}
               className="absolute top-0 left-0 right-0 bottom-0"
             >
@@ -133,14 +158,14 @@ const DepartmentId: NextPage<Props> = (props) => {
             </div>
           </div>
         </div>
-      </article>
 
-      {/* TODO: スクロールでfade-out */}
-      <div className="fixed w-full bottom-4 z-20">
-        <div className="w-5/6 mx-auto">
-          <TekibusyoLink />
+        {/* TODO: スクロールでfade-out */}
+        <div className="fixed w-full bottom-4 z-20">
+          <div className="w-5/6 mx-auto">
+            <TekibusyoLink />
+          </div>
         </div>
-      </div>
+      </article>
     </>
   );
 };
