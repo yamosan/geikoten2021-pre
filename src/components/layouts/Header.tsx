@@ -27,11 +27,17 @@ const Header: VFC = () => {
           </Link>
         </div>
         <nav className="z-40 flex items-center">
-          {isOpen && (
-            <div className="fixed inset-0 bg-primary">
-              <GlobalNavModal onLinkClick={toggleOpen} />
-            </div>
-          )}
+          <div
+            className={clsx(
+              {
+                hidden: !isOpen,
+              },
+              "fixed inset-0 bg-primary"
+            )}
+          >
+            <GlobalNavModal onLinkClick={toggleOpen} isOpen={isOpen} />
+          </div>
+
           <HamburgerMenu
             transition={transition}
             isOpen={isOpen}
