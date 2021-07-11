@@ -1,6 +1,7 @@
 import React from "react";
 import TwitterIcon from "./parts/TwitterIcon";
 import InstagramIcon from "./parts/InstagramIcon";
+import { LINE_ICON_URL, LINE_URL, TWITTER_URL, INSTAGRAM_URL } from "constants/urls";
 
 const SnsLinks = () => {
   return (
@@ -8,22 +9,18 @@ const SnsLinks = () => {
       <p className="font-black text-sm text-black">OFFICIAL SNS</p>
       <ul className="flex space-x-4 pt-3">
         <li>
-          <a href="https://lin.ee/r9XIORr" target="_blank" rel="noopener noreferrer">
+          <a href={LINE_URL} target="_blank" rel="noopener noreferrer">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
-              alt="友だち追加"
-              style={{ width: "90px", height: "28px" }}
-            />
+            <img src={LINE_ICON_URL} alt="友だち追加" style={{ width: "90px", height: "28px" }} />
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/geik0" target="_blank" rel="noopener noreferrer">
+          <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer">
             <TwitterIcon className="w-7 h-7" />
           </a>
         </li>
         <li>
-          <a href="https://instagram.com/geikoten2021" target="_blank" rel="noopener noreferrer">
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
             <InstagramIcon className="w-7 h-7" />
           </a>
         </li>
