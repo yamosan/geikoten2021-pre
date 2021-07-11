@@ -86,7 +86,7 @@ const DepartmentId: NextPage<Props> = (props) => {
           />
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
-              key={page}
+              key={`image_${page}`}
               custom={direction}
               variants={variants}
               initial="enter"
@@ -129,36 +129,37 @@ const DepartmentId: NextPage<Props> = (props) => {
           </div>
         </div>
 
-        {/* TODO: ↓ずらしてスクロールできるようにする */}
-        {/* fixedとmt-96 */}
         <div className="relative z-10 -mt-10">
           <div className="w-full pt-6 pb-20 rounded-3xl bg-bg">
-            <h2 className="font-bold text-3xl text-center text-secondary py-1.5">{current.displayName}</h2>
-            {current.managers.map((manager, i) => (
-              <h4 key={i.toString()} className="font-bold text-base text-center text-black">
-                {`${manager.class}・${manager.name}`}
-              </h4>
-            ))}
-            <div className="flex flex-col space-y-7 mt-4 bg-white w-11/12 rounded-2xl mx-auto px-5 pt-7 pb-12">
-              {current.qAndA.map((v, i) => (
-                <QAndA
-                  index={i + 1}
-                  names={current.managers.map((v) => v.shortenedName || v.name)}
-                  question={v.question}
-                  answers={v.answers}
-                  key={i.toString()}
-                />
-              ))}
-            </div>
-            <div className="text-center text-black font-bold mt-6">
-              <Link href={"/departments"}>一覧へ</Link>
-            </div>
-            <div className="w-5/6 mx-auto mt-6">
-              <LinkButton href="#">部署配属希望フォームはコチラ</LinkButton>
-            </div>
+            <AnimatePresence>
+              <motion.div key={`chat_${page}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                <h2 className="font-bold text-3xl text-center text-secondary py-1.5">{current.displayName}</h2>
+                {current.managers.map((manager, i) => (
+                  <h4 key={i.toString()} className="font-bold text-base text-center text-black">
+                    {`${manager.class}・${manager.name}`}
+                  </h4>
+                ))}
+                <div className="flex flex-col space-y-7 mt-4 bg-white w-11/12 rounded-2xl mx-auto px-5 pt-7 pb-12">
+                  {current.qAndA.map((v, i) => (
+                    <QAndA
+                      index={i + 1}
+                      names={current.managers.map((v) => v.shortenedName || v.name)}
+                      question={v.question}
+                      answers={v.answers}
+                      key={i.toString()}
+                    />
+                  ))}
+                </div>
+                <div className="text-center text-black font-bold mt-6">
+                  <Link href={"/departments"}>一覧へ</Link>
+                </div>
+                <div className="w-5/6 mx-auto mt-6">
+                  <LinkButton href="#">部署配属希望フォームはコチラ</LinkButton>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
-
         {/* TODO: スクロールでfade-out */}
         <div className="fixed w-full bottom-4 z-20">
           <div className="w-5/6 mx-auto">
