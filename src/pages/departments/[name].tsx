@@ -7,7 +7,7 @@ import type { Department } from "models/department";
 import LinkButton from "components/parts/LinkButton";
 import TekibusyoLink from "components/TekibusyoLink";
 import Paginator from "components/Paginator";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -61,15 +61,28 @@ const DepartmentId: NextPage<Props> = (props) => {
   const departments = props.items;
   const [[page, direction], setPage] = useState([0, 0]);
 
+  const getNextPage = useCallback(
+    (current, direction) => {
+      const offset = (current + direction) % departments.length;
+      return offset >= 0 ? offset : departments.length + offset;
+    },
+    [departments]
+  );
+
   const paginate = useCallback(
     (newDirection: Direction) => {
-      const offset = (page + newDirection) % departments.length;
-      const nextPage = offset >= 0 ? offset : departments.length + offset;
+      const nextPage = getNextPage(page, newDirection);
       setPage([nextPage, newDirection]);
       router.push(`/departments/${departments[nextPage].name}`, undefined, { scroll: false });
     },
-    [departments, page, router]
+    [departments, page, router, getNextPage]
   );
+
+  // 前後のページをプリフェッチ
+  useEffect(() => {
+    router.prefetch(`/departments/${departments[getNextPage(page, -1)].name}`);
+    router.prefetch(`/departments/${departments[getNextPage(page, 1)].name}`);
+  }, [departments, page, router, getNextPage]);
 
   const current = departments[page];
   return (
