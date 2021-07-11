@@ -173,7 +173,7 @@ const DepartmentId: NextPage<Props> = (props) => {
             </AnimatePresence>
           </div>
         </div>
-        {/* TODO: スクロールでfade-out */}
+
         <div className="fixed w-full bottom-4 z-20">
           <div className="w-5/6 mx-auto">
             <TekibusyoLink />
