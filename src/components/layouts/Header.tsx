@@ -14,7 +14,7 @@ const Header: VFC = () => {
   };
   useBackfaceFixed(isOpen);
   const isScrolled = useOnScrolling();
-  const transition = clsx("transform transition duration-500 ease-in-out");
+  const transition = clsx("transform transition duration-400 ease-in-out");
 
   return (
     <>
@@ -30,8 +30,10 @@ const Header: VFC = () => {
           <div
             className={clsx(
               {
-                hidden: !isOpen,
+                "opacity-0": !isOpen,
+                "pointer-events-none": !isOpen,
               },
+              transition,
               "fixed inset-0 bg-primary"
             )}
           >
