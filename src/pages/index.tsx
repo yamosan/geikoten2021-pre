@@ -46,11 +46,6 @@ const IndexPage: NextPage = () => (
           <h2 className="font-genuine text-primary tracking-wider text-5xl text-center">ABOUT</h2>
           <h4 className="font-bold text-black text-xs text-center">芸工展とは？</h4>
         </FadeInWhenVisible>
-        <div className="flex w-full items-center justify-between px-2 py-3">
-          <div className="w-28 h-28 bg-gray"></div>
-          <div className="w-28 h-28 bg-gray"></div>
-          <div className="w-28 h-28 bg-gray"></div>
-        </div>
         <FadeInWhenVisible>
           <p className="w-10/12 font-bold text-black text-sm text-center leading-7 mx-auto">
             芸工生が力を尽くして生み出した作品、見て思わず笑ってしまうステージ企画、オンラインだからこそ味わえるCGの世界など見どころ満載です！
