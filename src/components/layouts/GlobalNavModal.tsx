@@ -58,7 +58,7 @@ const GlobalNavModal: VFC<Props> = (props) => {
       <ul className="flex flex-col items-center space-y-8 pb-24">
         {PATHS.map((link) => (
           <li key={link.text}>
-            <button onClick={(e) => handleClick(e, link)} className="font-black text-white text-2xl">
+            <button onClick={(e) => handleClick(e, link)} className="font-bold text-white text-2xl">
               {link.text}
             </button>
           </li>
