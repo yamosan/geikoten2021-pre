@@ -21,7 +21,7 @@ const Card: VFC<Props> = ({ title, batch, imgSrc }) => {
       )}
       <div className="absolute w-full bg-black bottom-0 z-10">
         <div className="relative flex justify-center items-center">
-          <h3 className="font-medium text-white text-xs py-1">{title}</h3>
+          <h3 className="font-medium text-white text-xs py-1 -ml-1">{title}</h3>
           <div className="py-1 absolute right-2">
             <Arrow color="white" size="small" />
           </div>
