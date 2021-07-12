@@ -12,7 +12,7 @@
 }
 
 @layer utilities {
-  .text-bg-blur {
+  .text-bg-blur-xl {
     text-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
   }
 
