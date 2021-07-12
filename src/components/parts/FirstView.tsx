@@ -10,8 +10,15 @@ type Props = {
 const FirstView: VFC<Props> = ({ index, title, src }) => {
   return (
     <div className="relative overflow-hidden">
-      <figure className="bg-gray w-full h-60 flex justify-center items-center">
-        <Image src={src} alt={`${title}ページのサムネイル`} layout="fill" priority={true} className="object-cover" />
+      <figure className="bg-gray w-full">
+        <Image
+          src={src}
+          alt={`${title}ページのサムネイル`}
+          width={375}
+          height={300}
+          layout="responsive"
+          priority={true}
+        />
       </figure>
       <div className="absolute top-0 left-0 right-0 bottom-0 py-1 px-4 flex items-end">
         <div className="w-full flex items-center space-x-3">
