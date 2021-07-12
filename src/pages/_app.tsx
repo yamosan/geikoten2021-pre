@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Layout from "components/layouts";
 
 const App = ({ Component, pageProps, router }: AppProps) => {
-  console.log(router);
   return (
     <Layout>
       <AnimatePresence exitBeforeEnter>
