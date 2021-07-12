@@ -22,7 +22,7 @@ const FadeInWhenVisible: VFC<Props> = ({ children }) => {
       ref={ref}
       animate={controls}
       initial="hidden"
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
       variants={{
         visible: {
           opacity: 1,
