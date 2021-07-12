@@ -14,6 +14,7 @@ import { BUSYO_FORM } from "constants/urls";
 
 type Props = {
   items: Department[];
+  id: number;
 };
 
 type Direction = -1 | 0 | 1;
@@ -26,9 +27,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const items = await getDepartments();
-  return { props: { items } };
+  const id = items.find((v) => v.name === params?.name).id;
+  return { props: { items, id } };
 };
 
 const variants = {
@@ -60,7 +62,7 @@ const swipePower = (offset: number, velocity: number) => {
 const DepartmentId: NextPage<Props> = (props) => {
   const router = useRouter();
   const departments = props.items;
-  const [[page, direction], setPage] = useState([0, 0]);
+  const [[page, direction], setPage] = useState([props.id - 1, 0]); // TODO: idと配列のずれを無視している為、危険
 
   const getNextPage = useCallback(
     (current, direction) => {
