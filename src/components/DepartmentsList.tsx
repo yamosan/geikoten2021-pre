@@ -16,7 +16,7 @@ const PictureFrameList: VFC<Props> = ({ departments }) => {
             <PictureFrame title={v.displayName} src={`/img/contents/departments/${v.name}/frame.jpg`}>
               {v.managers.map((manager, j) => (
                 <h6 key={j.toString()} className="text-black font-bold text-xs">
-                  {manager.class + "." + manager.name}
+                  {manager.class + "・" + manager.name}
                 </h6>
               ))}
             </PictureFrame>
