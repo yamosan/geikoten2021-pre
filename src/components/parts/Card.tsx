@@ -15,7 +15,9 @@ const Card: VFC<Props> = ({ title, batch, imgSrc }) => {
         <Image src={imgSrc} alt="コンテンツのサムネイル" layout="fill" className="object-cover" />
       </figure>
       {batch && (
-        <div className="absolute top-2 left-2 font-genuine text-3xl text-white tracking-wide z-10">{batch}</div>
+        <div className="absolute top-2 left-2 font-genuine text-3xl text-white text-bg-blur-sm tracking-wide z-10">
+          {batch}
+        </div>
       )}
       <div className="absolute w-full bg-black bottom-0 z-10">
         <div className="relative flex justify-center items-center">
