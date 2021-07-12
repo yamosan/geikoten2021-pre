@@ -7,6 +7,7 @@ import QAndAPageLink from "components/QAndAPageLink";
 import Section from "components/Section";
 import DepartmentsList from "components/DepartmentsList";
 import LinkButton from "components/parts/LinkButton";
+import { BUSYO_FORM } from "constants/urls";
 import type { NextPage } from "next";
 import type { Department } from "models/department";
 
@@ -49,7 +50,7 @@ const Departments: NextPage<Props> = ({ items }) => {
           <DepartmentsList departments={departments} />
         </Section>
         <div className="py-10">
-          <LinkButton href="#">部署配属希望フォームはコチラ</LinkButton>
+          <LinkButton href={BUSYO_FORM}>部署配属希望フォームはコチラ</LinkButton>
         </div>
       </div>
     </>

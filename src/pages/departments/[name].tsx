@@ -10,6 +10,7 @@ import Paginator from "components/Paginator";
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { BUSYO_FORM } from "constants/urls";
 
 type Props = {
   items: Department[];
@@ -168,7 +169,7 @@ const DepartmentId: NextPage<Props> = (props) => {
                   <Link href={"/departments"}>一覧へ</Link>
                 </div>
                 <div className="w-5/6 mx-auto mt-6">
-                  <LinkButton href="#">部署配属希望フォームはコチラ</LinkButton>
+                  <LinkButton href={BUSYO_FORM}>部署配属希望フォームはコチラ</LinkButton>
                 </div>
               </motion.div>
             </AnimatePresence>
