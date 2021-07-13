@@ -18,7 +18,6 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="description" content={description} />
           <meta property="og:type" content="website" />
           <meta property="og:url" content={SITE_DOMAIN + BASE_PATH} />
@@ -33,7 +32,13 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
             rel="stylesheet"
           />
-          <link rel="preload" href={`${BASE_PATH}/fonts/Genuine/Genuine400.ttf`} as="font" type="font" crossOrigin="" />
+          <link
+            rel="preload"
+            href={`${BASE_PATH}/fonts/Genuine/Genuine400.ttf`}
+            as="font"
+            type="font/ttf"
+            crossOrigin=""
+          />
         </Head>
 
         <body>
