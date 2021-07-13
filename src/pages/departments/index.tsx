@@ -46,7 +46,7 @@ const Departments: NextPage<Props> = ({ items }) => {
         <Section heading="幹部" className="pt-12">
           <DepartmentsList departments={executive} />
         </Section>
-        <Section heading="部署" className="pt-12">
+        <Section heading="部署" className="pt-12" id="section_departments">
           <DepartmentsList departments={departments} />
         </Section>
         <div className="py-10">
