@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap");
-
 @font-face {
   font-family: "Genuine";
   /* TODO: webpackの設定で環境変数に応じてprefixをつけたい `{$NEXT_PUBLIC_BASE_PATH}/fonts/...` */
