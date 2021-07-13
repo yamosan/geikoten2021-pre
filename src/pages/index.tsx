@@ -7,6 +7,7 @@ import Div100vh from "react-div-100vh";
 import FadeInWhenVisible from "components/parts/FadeInWhenVisible";
 import ImageSlider from "components/ImageSlider";
 import HeroFrame from "components/parts/HeroFrame";
+import { BUSYO_FORM } from "constants/urls";
 
 const IndexPage: NextPage = () => (
   <>
@@ -31,7 +32,7 @@ const IndexPage: NextPage = () => (
     </section>
 
     <section>
-      <News text="『部署配属希望』受付開始！〆切は7/7まで" date="2021.6.30" />
+      <News text="『部署配属希望』受付開始！〆切は7/7まで" date="2021.6.30" href={BUSYO_FORM} />
     </section>
 
     <section className="flex flex-col items-center bg-white p-5 mt-5">
