@@ -3,6 +3,7 @@ import Image from "components/parts/Image";
 import { QAndA as TQAndA } from "models/qAndA";
 import SpeechBubble from "components/parts/SpeechBubble";
 import Highlighter from "react-highlight-words";
+import ZoomInWhenVisible from "./parts/ZoomInWhenVisible";
 
 type Props = TQAndA & {
   index?: number;
@@ -20,19 +21,22 @@ const QAndA: VFC<Props> = (props) => {
           {props.question}
         </SpeechBubble>
       </div>
+
       {/* ↓ Answer */}
       <div className="flex justify-end space-x-3">
         <div className="min-w-0 flex flex-col space-y-3">
           {props.answers.map((answer, i) => (
-            <SpeechBubble outline="primary" reversed key={i.toString()}>
-              <Highlighter
-                highlightClassName="highlight"
-                searchWords={answer.highlight || []}
-                autoEscape={true}
-                caseSensitive={true}
-                textToHighlight={answer.content}
-              />
-            </SpeechBubble>
+            <ZoomInWhenVisible key={i.toString()}>
+              <SpeechBubble outline="primary" reversed>
+                <Highlighter
+                  highlightClassName="highlight"
+                  searchWords={answer.highlight || []}
+                  autoEscape={true}
+                  caseSensitive={true}
+                  textToHighlight={answer.content}
+                />
+              </SpeechBubble>
+            </ZoomInWhenVisible>
           ))}
         </div>
         <div className="flex-shrink-0 flex flex-col items-center">
