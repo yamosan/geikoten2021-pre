@@ -1,7 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const QAndAIcon = () => (
-  <svg width="64" height="64" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <motion.svg
+    width="64"
+    height="64"
+    viewBox="0 0 66 66"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    animate={{ y: [0, -4, 0, -4, 0] }}
+    transition={{ repeat: Infinity, repeatDelay: 3 }}
+  >
     <g id="Container" clipPath="url(#clip0)">
       <g id="A">
         <path
@@ -37,7 +46,7 @@ const QAndAIcon = () => (
         <rect width="66" height="66" fill="white" />
       </clipPath>
     </defs>
-  </svg>
+  </motion.svg>
 );
 
 export default QAndAIcon;
