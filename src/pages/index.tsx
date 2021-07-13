@@ -11,7 +11,7 @@ import { BUSYO_FORM } from "constants/urls";
 
 const IndexPage: NextPage = () => (
   <>
-    <section className="overflow-hidden">
+    <section className="overflow-hidden select-none pointer-events-none">
       <Div100vh className="relative">
         <ImageSlider />
 
