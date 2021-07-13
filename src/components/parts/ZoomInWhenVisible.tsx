@@ -5,9 +5,10 @@ import { motion, useAnimation } from "framer-motion";
 
 type Props = {
   children: ReactNode;
+  className?: string;
 };
 
-const ZoomInWhenVisible: VFC<Props> = ({ children }) => {
+const ZoomInWhenVisible: VFC<Props> = ({ children, className }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -33,6 +34,7 @@ const ZoomInWhenVisible: VFC<Props> = ({ children }) => {
           scale: 0.8,
         },
       }}
+      className={className}
     >
       {children}
     </motion.div>

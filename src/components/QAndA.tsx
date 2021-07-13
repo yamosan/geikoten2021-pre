@@ -26,7 +26,7 @@ const QAndA: VFC<Props> = (props) => {
       <div className="flex justify-end space-x-3">
         <div className="min-w-0 flex flex-col space-y-3">
           {props.answers.map((answer, i) => (
-            <ZoomInWhenVisible key={i.toString()}>
+            <ZoomInWhenVisible key={i.toString()} className="flex justify-end">
               <SpeechBubble outline="primary" reversed>
                 <Highlighter
                   highlightClassName="highlight"
