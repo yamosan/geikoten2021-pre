@@ -16,7 +16,7 @@ const IndexPage: NextPage = () => (
         <ImageSlider />
 
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-          <Image src="/img/logo.png" alt="芸工展ロゴ" width={187} height={192} />
+          <Image src="/img/hero/logo.png" alt="芸工展ロゴ" width={187} height={192} />
         </div>
 
         <div className="w-5/6 mx-auto h-full pt-16 pb-16">
