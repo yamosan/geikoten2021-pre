@@ -6,6 +6,7 @@ import ContentsNav from "components/ContentsNav";
 import Div100vh from "react-div-100vh";
 import FadeInWhenVisible from "components/parts/FadeInWhenVisible";
 import ImageSlider from "components/ImageSlider";
+import HeroFrame from "components/parts/HeroFrame";
 
 const IndexPage: NextPage = () => (
   <>
@@ -13,10 +14,12 @@ const IndexPage: NextPage = () => (
       <Div100vh className="relative">
         <ImageSlider />
 
-        {/* TODO: フレーム */}
-
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
           <Image src="/img/logo.png" alt="芸工展ロゴ" width={187} height={192} />
+        </div>
+
+        <div className="w-5/6 mx-auto h-full pt-16 pb-16">
+          <HeroFrame />
         </div>
 
         <div className="absolute bottom-0 h-6 w-full bg-bg">
