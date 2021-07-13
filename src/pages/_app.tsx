@@ -3,9 +3,22 @@ import "tailwindcss/tailwind.css";
 import "styles/globals.css";
 import { AnimatePresence, motion } from "framer-motion";
 import Layout from "components/layouts";
+import useMedia from "hooks/useMediaQuery";
 
 const App = ({ Component, pageProps, router }: AppProps) => {
-  return (
+  const isWide = useMedia("(min-width: 640px)");
+
+  // FIXME: hydration error
+  return isWide ? (
+    <div className="w-screen h-screen bg-primary flex justify-center items-center">
+      <p className="font-bold text-white text-3xl" suppressHydrationWarning>
+        スマートフォンでご覧ください
+        <span role="img" aria-label="cry">
+          😢
+        </span>
+      </p>
+    </div>
+  ) : (
     <Layout>
       <AnimatePresence exitBeforeEnter>
         <motion.div
