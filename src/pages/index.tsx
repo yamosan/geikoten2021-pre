@@ -32,7 +32,7 @@ const IndexPage: NextPage = () => (
     </section>
 
     <section>
-      <News text="『部署配属希望』受付開始！〆切は7/22まで" date="2021.6.30" href={BUSYO_FORM} />
+      <News text="『部署配属希望』受付開始！〆切は7/22まで" date="2021.7.16" href={BUSYO_FORM} />
     </section>
 
     <section className="flex flex-col items-center bg-white p-5 mt-5">
