@@ -5,8 +5,10 @@
 @font-face {
   font-family: "Genuine";
   /* TODO: webpackの設定で環境変数に応じてprefixをつけたい `{$NEXT_PUBLIC_BASE_PATH}/fonts/...` */
-  src: url("/fonts/Genuine/Genuine 400.ttf");
+  src: url("/fonts/Genuine/Genuine400.ttf");
+  font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @layer utilities {
