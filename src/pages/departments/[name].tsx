@@ -92,7 +92,7 @@ const DepartmentId: NextPage<Props> = (props) => {
     <>
       <article className="w-screen relative">
         {/* gallery */}
-        <div className="relative overflow-hidden" style={{ height: "62vh" }}>
+        <div className="relative overflow-hidden select-none" style={{ height: "62vh" }}>
           <Image
             src={`/img/contents/departments/q_and_a_bg.png`}
             alt="背景"
