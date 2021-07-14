@@ -2,7 +2,7 @@ import FirstView from "components/parts/FirstView";
 import Section from "components/Section";
 import type { NextPage } from "next";
 
-const IndexPage: NextPage = () => (
+const Movie: NextPage = () => (
   <>
     <FirstView index="03" title="ムービー" src="/img/contents/movie/hero.png" />
     <div className="w-5/6 mx-auto pb-20">
@@ -21,4 +21,4 @@ const IndexPage: NextPage = () => (
   </>
 );
 
-export default IndexPage;
+export default Movie;
