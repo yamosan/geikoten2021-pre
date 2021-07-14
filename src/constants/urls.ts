@@ -9,6 +9,7 @@ export const SITE_DOMAIN = "http://geikousai-ncu.com";
 
 // コンテンツ urls
 export const TEKIBUSYO_CHART_URL = `${SITE_DOMAIN}/chart`;
+export const GAME_URL = `${SITE_DOMAIN}/game`;
 
 // 部署配属希望フォーム
 export const BUSYO_FORM =
