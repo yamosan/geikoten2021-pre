@@ -92,61 +92,61 @@ const DepartmentId: NextPage<Props> = (props) => {
     <>
       <article className="w-screen relative">
         {/* gallery */}
-        <div className="relative overflow-hidden select-none" style={{ height: "62vh" }}>
-          <Image
-            src={`/img/contents/departments/q_and_a_bg.png`}
-            alt="背景"
-            width={375}
-            height={520}
-            layout="responsive"
-          />
-          <AnimatePresence initial={false} custom={direction}>
-            <motion.div
-              key={`image_${page}`}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 },
-              }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
+        <div className="relative overflow-hidden select-none" style={{ height: "60vh" }}>
+          <Image src={`/img/contents/departments/q_and_a_bg.png`} alt="背景" layout="fill" objectFit="cover" />
+          {/* ヘッダーの高さ分引いたコンテナ */}
+          <div className="h-full pt-16 pb-4 z-10">
+            <div className="relative h-full">
+              <AnimatePresence initial={false} custom={direction}>
+                <motion.div
+                  key={`image_${page}`}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 },
+                  }}
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0}
+                  onDragEnd={(e, { offset, velocity }) => {
+                    const swipe = swipePower(offset.x, velocity.x);
 
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
-              className="absolute top-0 left-0 right-0 bottom-0"
-            >
-              <div className="absolute top-0 left-0 w-full h-full">
-                <div className="absolute top-20 left-1/2 -translate-x-1/2 transform rotate-6">
-                  <Image
-                    src={`/img/contents/departments/${current.name}/main.jpg`}
-                    alt={current.name}
-                    width={254}
-                    height={382}
-                    layout="fixed"
-                    priority={true}
-                  />
-                </div>
+                    if (swipe < -swipeConfidenceThreshold) {
+                      paginate(1);
+                    } else if (swipe > swipeConfidenceThreshold) {
+                      paginate(-1);
+                    }
+                  }}
+                  className="absolute inset-0"
+                >
+                  <div className="h-full transform rotate-6">
+                    <Image
+                      src={`/img/contents/departments/${current.name}/main.jpg`}
+                      alt={current.name}
+                      layout="fill"
+                      objectFit="contain"
+                      priority={true}
+                    />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+              {/* ページインジケータ */}
+              <div className="z-10 absolute top-1/2 left-0 w-full">
+                <Paginator onNextClick={() => paginate(1)} onPrevClick={() => paginate(-1)} />
               </div>
-            </motion.div>
-          </AnimatePresence>
-          <div className="z-10 absolute top-56 left-0 w-full">
-            <Paginator onNextClick={() => paginate(1)} onPrevClick={() => paginate(-1)} />
+            </div>
           </div>
         </div>
 
-        <div className="relative z-10 -mt-10">
-          <div className="w-full pt-6 pb-20 rounded-3xl bg-bg">
+        <div className="relative w-full z-20 -mt-5">
+          <div
+            className="w-full pt-6 pb-20 rounded-3xl bg-bg"
+            style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
+          >
             <AnimatePresence>
               <motion.div key={`chat_${page}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                 <h2 className="font-bold text-3xl text-center text-secondary py-1.5">{current.displayName}</h2>
@@ -178,7 +178,7 @@ const DepartmentId: NextPage<Props> = (props) => {
           </div>
         </div>
 
-        <div className="fixed w-full bottom-4 z-20">
+        <div className="fixed w-full bottom-4 z-30">
           <div className="w-5/6 mx-auto">
             <TekibusyoLink />
           </div>
