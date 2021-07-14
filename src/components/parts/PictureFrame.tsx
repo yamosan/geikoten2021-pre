@@ -1,6 +1,7 @@
 import React, { ReactNode, useEffect, VFC } from "react";
 import Image from "components/parts/Image";
 import { motion, useAnimation } from "framer-motion";
+import Arrow from "components/parts/Arrow";
 
 type Props = {
   title: string;
@@ -35,6 +36,9 @@ const PictureFrame: VFC<Props> = ({ title, children, src, start }) => {
           <span className="absolute top-1 w-1 h-1 bg-black rounded-full"></span>
           <div className="relative w-full h-full flex justify-center items-center overflow-hidden">
             <Image src={src} alt="" layout="fill" className="object-cover bg-gray p-2" />
+          </div>
+          <div className="absolute bottom-1 right-1 transform z-10">
+            <Arrow size="normal" bgColor="white" color="black" />
           </div>
         </figure>
       </motion.div>
