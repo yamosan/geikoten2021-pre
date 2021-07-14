@@ -17,7 +17,7 @@ const PictureFrame: VFC<Props> = ({ title, children, src, start }) => {
       controls.start({
         rotate: [0, -3, -3, 3, -2, 1, -1, 0.5, -0.2, 0.1, 0],
         transition: {
-          duration: 3,
+          duration: 1.6,
         },
       });
     }

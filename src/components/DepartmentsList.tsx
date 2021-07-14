@@ -19,9 +19,8 @@ const PictureFrameList: VFC<Props> = ({ departments }) => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // setSelectedId(getRandomInt(0, departments.length));
-      setSelectedId(getRandomInt(0, 5));
-    }, 4000);
+      setSelectedId(getRandomInt(0, departments.length));
+    }, 3000);
 
     return () => {
       clearInterval(intervalId);
