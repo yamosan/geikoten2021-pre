@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
           <meta property="og:url" content={SITE_DOMAIN + BASE_PATH} />
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
-          <meta property="og:image" content={`${SITE_DOMAIN + BASE_PATH}/img/logo.png`} />
+          <meta property="og:image" content={`${SITE_DOMAIN + BASE_PATH}/img/ogp.png`} />
           <meta name="twitter:card" content="summary" />
           <link rel="icon" sizes="48x48" href={`${BASE_PATH}/favicon/favicon.ico`} />
           <link rel="apple-touch-icon" sizes="180x180" href={`${BASE_PATH}/favicon/apple-touch-icon.png`} />
