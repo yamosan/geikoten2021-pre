@@ -11,6 +11,7 @@ import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { BUSYO_FORM } from "constants/urls";
+import { use100vh } from "react-div-100vh";
 
 type Props = {
   items: Department[];
@@ -63,6 +64,7 @@ const DepartmentId: NextPage<Props> = (props) => {
   const router = useRouter();
   const departments = props.items;
   const [[page, direction], setPage] = useState([props.id - 1, 0]); // TODO: idと配列のずれを無視している為、危険
+  const screenHeight = use100vh();
 
   const getNextPage = useCallback(
     (current, direction) => {
@@ -92,7 +94,7 @@ const DepartmentId: NextPage<Props> = (props) => {
     <>
       <article className="w-screen relative">
         {/* gallery */}
-        <div className="relative overflow-hidden select-none" style={{ height: "60vh" }}>
+        <div className="relative overflow-hidden select-none" style={{ height: screenHeight * 0.6 }}>
           <Image src={`/img/contents/departments/q_and_a_bg.png`} alt="背景" layout="fill" objectFit="cover" />
           {/* ヘッダーの高さ分引いたコンテナ */}
           <div className="h-full pt-16 pb-4 z-10">
