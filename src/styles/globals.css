@@ -94,3 +94,11 @@
     clip-path: polygon(100% 0, 0% 50%, 100% 100%);
   }
 }
+
+/* framer-motionで画像がチラつく */
+.stop-flickering {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  /* -webkit-transform-style: preserve-3d; */
+  /* -webkit-perspective: 1000; */
+}
