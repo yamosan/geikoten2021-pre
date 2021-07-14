@@ -9,7 +9,7 @@ const QAndAIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     animate={{ y: [0, -4, 0, -4, 0] }}
-    transition={{ repeat: Infinity, repeatDelay: 3 }}
+    transition={{ repeat: Infinity, repeatDelay: 1.5 }}
   >
     <g id="Container" clipPath="url(#clip0)">
       <g id="A">
