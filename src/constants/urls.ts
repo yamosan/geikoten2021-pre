@@ -8,8 +8,7 @@ export const INSTAGRAM_URL = "https://instagram.com/geikoten2021";
 export const SITE_DOMAIN = "http://geikousai-ncu.com";
 
 // コンテンツ urls
-export const TEKIBUSYO_CHART_URL = SITE_DOMAIN + "/chart";
-export const GAME_URL = SITE_DOMAIN + "/game";
+export const TEKIBUSYO_CHART_URL = `${SITE_DOMAIN}/chart`;
 
 // 部署配属希望フォーム
 export const BUSYO_FORM =
