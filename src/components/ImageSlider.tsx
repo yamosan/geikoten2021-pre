@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "components/parts/Image";
 import clsx from "clsx";
 
-const IMAGES = ["/img/hero/slide1.jpg", "/img/hero/slide2.jpg", "/img/hero/slide3.jpg", "/img/hero/slide4.jpg"];
+const IMAGES = ["/img/hero/slide1.png", "/img/hero/slide2.png", "/img/hero/slide3.png", "/img/hero/slide4.png"];
 
 const ImageSlider = () => {
   const [currentImageId, setCurrentImageId] = useState(0);
