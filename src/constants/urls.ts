@@ -14,3 +14,7 @@ export const GAME_URL = `${SITE_DOMAIN}/game`;
 // 部署配属希望フォーム
 export const BUSYO_FORM =
   "https://docs.google.com/forms/d/e/1FAIpQLScOQvRlDz9_fdiRfGxOH2NlXdHDi1POUw7krV6Cy7cVXO5HFA/viewform";
+
+// ムービー
+export const CONCEPT_MOVIE = "https://www.youtube.com/embed/w-tGNmUipk0";
+export const DEPARTMENTS_MOVIE = "";
