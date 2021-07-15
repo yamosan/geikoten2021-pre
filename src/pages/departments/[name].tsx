@@ -136,11 +136,11 @@ const DepartmentId: NextPage<Props> = (props) => {
                   </div>
                 </motion.div>
               </AnimatePresence>
-              {/* ページインジケータ */}
-              <div className="z-10 absolute top-1/2 left-0 w-full">
-                <Paginator onNextClick={() => paginate(1)} onPrevClick={() => paginate(-1)} />
-              </div>
             </div>
+          </div>
+          {/* ページインジケータ */}
+          <div className="z-10 absolute top-1/2 left-0 w-full">
+            <Paginator onNextClick={() => paginate(1)} onPrevClick={() => paginate(-1)} />
           </div>
         </div>
 

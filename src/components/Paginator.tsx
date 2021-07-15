@@ -7,7 +7,7 @@ type Props = {
 
 const Paginator: VFC<Props> = ({ onNextClick, onPrevClick }) => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center h-0">
       {onPrevClick && (
         <button
           onClick={(e) => {
