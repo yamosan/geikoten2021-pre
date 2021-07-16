@@ -17,4 +17,4 @@ export const BUSYO_FORM =
 
 // ムービー
 export const CONCEPT_MOVIE = "https://www.youtube.com/embed/w-tGNmUipk0";
-export const DEPARTMENTS_MOVIE = "";
+export const DEPARTMENTS_MOVIE = "https://www.youtube.com/embed/whpFjeH0ZqU";
