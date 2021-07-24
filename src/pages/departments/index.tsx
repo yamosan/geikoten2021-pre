@@ -35,9 +35,9 @@ const Departments: NextPage<Props> = ({ items }) => {
       <FirstView index="01" title="部署紹介" src="/img/contents/departments/hero.png" />
       <div className="w-5/6 mx-auto pt-8">
         <p className="text-black text-sm font-medium leading-6">
-          芸工祭には全部で19の部署長と幹部が居ます。
+          芸工展には全部で19の部署長と幹部が居ます。
           <br />
-          <span className="highlight">気になる部署</span>に所属して、みんなで芸工祭を盛り上げよう！
+          <span className="highlight">気になる部署</span>に所属して、みんなで芸工展を盛り上げよう！
         </p>
         <div className="flex flex-col space-y-3 pt-6">
           <TekibusyoLink />
