@@ -1,5 +1,7 @@
 # GEIKOTEN 2021 プレサイト
 
+http://geikousai-ncu.com/2021/pre
+
 ### セットアップ
 
 ```
