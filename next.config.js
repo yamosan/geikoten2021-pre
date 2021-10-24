@@ -3,7 +3,7 @@ const isProd = process.env.NODE_ENV === "production";
 module.exports = {
   images: {
     domains: ["scdn.line-apps.com"],
-    loader: "imgix",
+    loader: "custom",
     path: "/",
   },
   webpack: (config, { isServer }) => {
